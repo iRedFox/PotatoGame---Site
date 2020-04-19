@@ -1,1 +1,0 @@
-let user = await User.findOne({username: req.body.username});

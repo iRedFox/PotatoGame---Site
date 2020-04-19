@@ -110,7 +110,6 @@ registerButton.onclick = async () => {
     }
     info.username = nameRegister.value;
     info.password = passRegister.value;
-
     const url = 'http://134.122.81.113:80/register';
     const options = {
         method: 'POST',

@@ -6,7 +6,10 @@ const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const auth = require('./routes/auth');
 const users = require('./routes/users');
+const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
+const cookieParser = require('cookie-parser');
+
 const port = 80;
 
 if(!(config.get('jwtPrivateKey'))){
@@ -15,30 +18,28 @@ if(!(config.get('jwtPrivateKey'))){
 }
 
 app.set('view engine', 'pug');
+app.use(cookieParser());
 app.use(express.static('views'));
 app.use(express.json());
 app.use('/register', users);
 app.use('/login', auth);
+app.use('/logout', logout);
 app.use('/game', game);
 
+//mongodb://localhost:27017/potato
 mongoose.connect('mongodb://localhost:27017/potato')
     .then(() => console.log("You're connected to the database"))
     .catch(err => console.log(err))
 
 app.get('/', (req, res) =>{
-    res.render('index', {});
+    // if he's logged in.
+    const token = req.cookies.access_token;
+    if(token){
+        res.redirect('/game');
+    // else go render index
+    }else{
+        res.render('index', {});
+    }
 });
 
-app.use('/', function (req, res, next) {
-    console.log("received request: " + req.originalUrl);
-    next();
-});
-
-app.post('/playerScore', (req, res) =>{
-    let message = req.body;
-    console.log(message);
-    res.end();
-});
-
-
-app.listen(port, () => console.log('Server is working at ping 3000'));
+app.listen(port, () => console.log('Server is working at ping 80'));

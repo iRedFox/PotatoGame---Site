@@ -1,6 +1,8 @@
 console.log('The client javascript code is running..');
 
 let c2d = document.getElementById('potatoHitBox');
+let logoutButton = document.getElementById('logout-button');
+
 c2d.width = 105;
 c2d.height = 125;
 let ctx = c2d.getContext('2d');
@@ -39,20 +41,22 @@ button_click.onclick = countClicks;
 
 let count = 0;
 async function countClicks(){
-	let req = new XMLHttpRequest();
 	// Move the image randomly.
 	let x = await Math.floor(Math.random()*400);
 	let y = await Math.floor(Math.random()*400);
 	button_click.style.top = x + 'px';
 	button_click.style.left = y + 'px';
-    const points = document.getElementById('coin-count').innerHTML = count++;
-    req.onreadystatechange = function() {
-		if(this.readyState==4 && this.status==200){
-			
-		}
-	}
-	req.open("POST", `http://localhost:3000/playerScore`);
-	req.setRequestHeader("Content-Type", "application/json");
-	req.send('test');
+    const points = document.getElementById('coin-count').innerHTML = ++count;
 }
 
+
+logoutButton.onclick = async () => {
+    const url = 'http://134.122.81.113:80/logout';
+    const options = {
+        method: 'GET'
+    }
+    const res = fetch(url, options);
+    if((await res).status === 200){
+        window.location = '/';
+    }
+}
