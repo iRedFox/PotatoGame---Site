@@ -7,18 +7,19 @@ body
 		canvas(id='potato1')
 		canvas(id='potato2')
 		canvas(id='potato3')
+		canvas(id='potato4')
 	button(id='login') تسجيل دخول
 	button(id='register') التسجيل
-	div(class='alert')
-		span#alertMsg
 	div(id='login-box')
 		br
 		input(id='name-login')
 		label  اسمك 
 		br
-		input(id='password-login')
+		input(id='password-login' type='password')
 		label  باسووردك 
 		br
+		input(type='checkbox' id='check-pass')
+		| إظهار الباسوورد
 		br
 		button(id='login-button') دخول
 	div(id='register-box')
@@ -26,9 +27,13 @@ body
 		input(id='name-register')
 		label  اسمك 
 		br
-		input(id='password-register')
+		input(id='password-register' type='password')
 		label  باسووردك 
 		br
+		input(type='checkbox' id='check-pass')
+		| إظهار الباسوورد
 		br
 		button(id='register-button') انشاء حساب
+	div(class='alert')
+		span#alertMsg
 	script(src='/client-auth.js')

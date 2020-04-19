@@ -45,7 +45,7 @@
     position: absolute;
     bottom: 70%;
     right: 49%;
-    background: white;
+    background: blanchedalmond;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     font-size: 45px;
@@ -57,14 +57,14 @@
     position: absolute;
     bottom: 70%;
     right: 30%;
-    background: white;
+    background: blanchedalmond;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     font-size: 45px;
 }
 #login:hover, #register:hover {
     text-align: center;
-    background: whitesmoke;
+    background: cornsilk;
     box-shadow: 0px 0px 0px transparent;
     text-shadow: 0px 0px 0px transparent;
 }
@@ -105,14 +105,22 @@
     background-color: #f44336; /* Red */
     color: white;
     text-align: center;
+    z-index: -9999;
     font-size: 30px;
-    margin-bottom: 15px;
-  }
+    margin-top: -160px;
+}
 
-#potato1, #potato2, #potato3{
+#potatos{
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    background-color: blanchedalmond;
+}
+#potato1, #potato2, #potato3, #potato4{
     width: 160px;
-    margin-right: 80%;
-    margin: 8%;
+    margin: 9%;
     opacity: 70%;
     -webkit-animation-name: rotate;
     -webkit-animation-duration: 4000ms;
