@@ -1,0 +1,34 @@
+html
+	head
+		link(rel="stylesheet" type="text/css" href="./style.css")
+		title لعبة البطاطس2
+body
+	div#potatos
+		canvas(id='potato1')
+		canvas(id='potato2')
+		canvas(id='potato3')
+	button(id='login') تسجيل دخول
+	button(id='register') التسجيل
+	div(class='alert')
+		span#alertMsg
+	div(id='login-box')
+		br
+		input(id='name-login')
+		label  اسمك 
+		br
+		input(id='password-login')
+		label  باسووردك 
+		br
+		br
+		button(id='login-button') دخول
+	div(id='register-box')
+		br
+		input(id='name-register')
+		label  اسمك 
+		br
+		input(id='password-register')
+		label  باسووردك 
+		br
+		br
+		button(id='register-button') انشاء حساب
+	script(src='/client-auth.js')
