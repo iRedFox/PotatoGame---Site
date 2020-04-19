@@ -14,13 +14,6 @@ if(!(config.get('jwtPrivateKey'))){
     process.exit(1);
 }
 
-io.on('connection', function(socket){
-    console.log('a user connected');
-    socket.on('disconnect', function(){
-      console.log('user disconnected');
-    });
-});
-
 app.set('view engine', 'pug');
 app.use(express.static('views'));
 app.use(express.json());
@@ -34,6 +27,11 @@ mongoose.connect('mongodb://localhost:27017/potato')
 
 app.get('/', (req, res) =>{
     res.render('index', {});
+});
+
+app.use('/', function (req, res, next) {
+    console.log("received request: " + req.originalUrl);
+    next();
 });
 
 app.post('/playerScore', (req, res) =>{
