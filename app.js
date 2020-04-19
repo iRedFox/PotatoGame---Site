@@ -21,7 +21,7 @@ app.use('/register', users);
 app.use('/login', auth);
 app.use('/game', game);
 
-mongoose.connect('mongodb://localhost/potato')
+mongoose.connect('mongodb://localhost:27017/potato')
     .then(() => console.log("You're connected to the database"))
     .catch(err => console.log(err))
 
