@@ -7,7 +7,7 @@ Joi.objectId = require('joi-objectid')(Joi);
 const auth = require('./routes/auth');
 const users = require('./routes/users');
 const game = require('./routes/gameServer');
-const port = 3000;
+const port = 80;
 
 if(!(config.get('jwtPrivateKey'))){
     console.log('FATAL ERROR: jwtPrivateKey IS NOT DEFINED');
