@@ -113,6 +113,7 @@
     width: 160px;
     margin-right: 80%;
     margin: 8%;
+    opacity: 70%;
     -webkit-animation-name: rotate;
     -webkit-animation-duration: 4000ms;
     -webkit-animation-iteration-count: infinite;
