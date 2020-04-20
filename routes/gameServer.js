@@ -8,7 +8,7 @@ router.use(cookieParser());
 
 router.get('/', auth, (req, res) =>{
     const token = req.cookies.access_token;
-    let decoded = jwt_decode(token);
+    let decoded = jwtDecode(token);
     console.log(decoded);
     res.render('game', {username : username});
 });
