@@ -16,7 +16,6 @@ router.post('/', async (req, res) =>{
     user.Score = user.Score + Number(req.body.defaultValue);
     console.log(user.Score);
     await user.save();
-    console.log(user.Score);
     res.sendStatus(200).send(user.Score);
 });
 

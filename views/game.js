@@ -54,8 +54,13 @@ async function countClicks(){
             'Content-Type': 'application/json'
         },
     }
-    const res = fetch(url, options);
-    const points = document.getElementById('coin-count').innerHTML = await(res);
+    let currentScore = 0;
+    fetch(url, options).then((response) => {
+        console.log(response);
+        response.json().then((data) => {
+            currentScore = data;
+        });;
+    const points = document.getElementById('coin-count').innerHTML = currentScore;
 }
 
 
