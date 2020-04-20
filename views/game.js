@@ -61,10 +61,12 @@ async function countClicks(){
         return response.text();
     })
     .then((data) => {
+        console.log(data);
         currentScore = data;
+        console.log('currentScore: ' + currentScore);
+        const points = document.getElementById('coin-count').innerHTML = currentScore;
     });
 
-    const points = document.getElementById('coin-count').innerHTML = currentScore;
 }
 
 
