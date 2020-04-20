@@ -50,6 +50,9 @@ async function countClicks(){
     const options = {
         method: 'POST',
         body: JSON.stringify(scoreInfo),
+        headers:{
+            'Content-Type': 'application/json'
+        },
     }
     const res = fetch(url, options);
     console.log(await(res));
