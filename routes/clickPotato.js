@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const jwtDecode = require('jwt-decode');
 const router = express.Router();
 const cookieParser = require('cookie-parser');
 router.use(cookieParser());

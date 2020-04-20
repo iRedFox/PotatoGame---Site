@@ -39,7 +39,7 @@ c2d.addEventListener("mouseout", mouseMoveOut, false);
 
 let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
-
+scoreInfo = 1;
 async function countClicks(){
 	// Move the image randomly.
 	let x = Math.floor(Math.random()*600);
@@ -49,7 +49,7 @@ async function countClicks(){
     const url = 'http://134.122.81.113:80/clickRegistry';
     const options = {
         method: 'POST',
-        body: 1,
+        body: JSON.stringify(scoreInfo),
         headers:{
             'Content-Type': 'application/json'
         }
