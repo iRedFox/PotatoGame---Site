@@ -40,14 +40,23 @@ c2d.addEventListener("mouseout", mouseMoveOut, false);
 let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 
-let count = 0;
 function countClicks(){
 	// Move the image randomly.
 	let x = Math.floor(Math.random()*600);
 	let y = Math.floor(Math.random()*400);
 	button_click.style.top = x + 'px';
-	button_click.style.left = y + 'px';
-    const points = document.getElementById('coin-count').innerHTML = ++count;
+    button_click.style.left = y + 'px';
+    const url = 'http://134.122.81.113:80/clickRegistry';
+    const options = {
+        method: 'POST',
+        body: 1,
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    
+    }
+    const res = fetch(url, options);
+    const points = document.getElementById('coin-count').innerHTML = res;
 }
 
 

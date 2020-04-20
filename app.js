@@ -6,6 +6,7 @@ const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 const auth = require('./routes/auth');
 const users = require('./routes/users');
+const clicks = require('./routes/clickPotato');
 const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
 const cookieParser = require('cookie-parser');
@@ -25,6 +26,7 @@ app.use('/register', users);
 app.use('/login', auth);
 app.use('/logout', logout);
 app.use('/game', game);
+app.use('/clickRegistry', clicks);
 
 //mongodb://localhost:27017/potato
 mongoose.connect('mongodb://localhost:27017/potato')
