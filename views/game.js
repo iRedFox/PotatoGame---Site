@@ -39,7 +39,7 @@ c2d.addEventListener("mouseout", mouseMoveOut, false);
 
 let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
-scoreInfo = 1;
+scoreInfo = { defaultValue: 1 };
 async function countClicks(){
 	// Move the image randomly.
 	let x = Math.floor(Math.random()*600);
