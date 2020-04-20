@@ -54,13 +54,13 @@ async function countClicks(){
             'Content-Type': 'application/json'
         },
     }
-    let currentScore = 0;
     fetch(url, options)
     .then((response) => {
         console.log(response);
         return response.text();
     })
     .then((data) => {
+        let currentScore = 0;
         console.log(data);
         currentScore = data;
         console.log('currentScore: ' + currentScore);
