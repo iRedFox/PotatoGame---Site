@@ -59,7 +59,7 @@ async function countClicks(){
         console.log(response);
         response.text().then((data) => {
             console.log(data);
-            currentScore += data;
+            currentScore = data;
         });
     });
 
