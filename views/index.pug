@@ -3,6 +3,8 @@ html
 		link(rel="stylesheet" type="text/css" href="./style.css")
 		title لعبة البطاطس2
 body
+	div(class='alert')
+		span#alertMsg
 	div#potatos
 		canvas(id='potato1')
 		canvas(id='potato2')
@@ -34,6 +36,4 @@ body
 		| إظهار الباسوورد
 		br
 		button(id='register-button') انشاء حساب
-	div(class='alert')
-		span#alertMsg
 	script(src='/client-auth.js')

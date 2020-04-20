@@ -102,10 +102,9 @@
 .alert {
     padding: 20px;
     font-family: 'Rakkas', cursive;
-    background-color: #f44336; /* Red */
+    background-color: #f44336;
     color: white;
     text-align: center;
-    z-index: -9999;
     font-size: 30px;
     margin-top: -160px;
 }
@@ -118,6 +117,7 @@
     top: 0px; 
     background-color: blanchedalmond;
 }
+
 #potato1, #potato2, #potato3, #potato4{
     width: 160px;
     margin: 9%;
@@ -134,7 +134,6 @@
     -ms-animation-duration: 4000ms;
     -ms-animation-iteration-count: infinite;
     -ms-animation-timing-function: linear;
-    
     animation-name: rotate;
     animation-duration: 4000ms;
     animation-iteration-count: infinite;
