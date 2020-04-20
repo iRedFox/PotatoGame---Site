@@ -55,8 +55,7 @@ async function countClicks(){
         },
     }
     const res = fetch(url, options);
-    console.log(await(res));
-    const points = document.getElementById('coin-count').innerHTML = await res;
+    const points = document.getElementById('coin-count').innerHTML = await(res);
 }
 
 

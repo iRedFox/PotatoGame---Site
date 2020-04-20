@@ -14,13 +14,10 @@ router.post('/', async (req, res) =>{
     let user = await User.findOne({username: decoded.username});
     console.log(user.Score);
     user.Score = user.Score + Number(req.body.defaultValue);
-    console.log('after');
-    console.log('here without score' + req.body);
-    console.log('heres the body: ' + req.body.defaultValue);
     console.log(user.Score);
     await user.save();
     console.log(user.Score);
-    res.status(200).send(user.Score);
+    res.sendStatus(200).send(user.Score);
 });
 
 module.exports = router;
