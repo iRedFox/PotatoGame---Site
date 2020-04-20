@@ -114,15 +114,8 @@ loginButton.onclick = async () => {
         },
         credentials: 'include'
     }
-    const url1 = 'http://134.122.81.113:80/game';
-    const options1 = {
-        method: 'POST',
-        body: info.username,
-    }
-    const sendName = fetch(url1, options1);
     const res = fetch(url, options);
     if((await res).status == 200){
-        await sendName;
         window.location = '/game';
     }
 
