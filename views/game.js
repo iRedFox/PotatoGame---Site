@@ -55,12 +55,11 @@ async function countClicks(){
         },
     }
     let currentScore = 0;
-    fetch(url, options).then((response) => {
-        console.log(response);
-        response.text().then((data) => {
-            console.log(data);
-            currentScore = data;
-        });
+    fetch(url, options).then(function (a) {
+        return a.json(); 
+    })
+    .then(function (json) {
+        console.log(json);
     });
 
     const points = document.getElementById('coin-count').innerHTML = currentScore;
