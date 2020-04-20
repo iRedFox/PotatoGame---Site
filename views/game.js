@@ -58,7 +58,8 @@ async function countClicks(){
     fetch(url, options).then((response) => {
         console.log(response);
         response.text().then((data) => {
-            currentScore = data;
+            console.log(data);
+            currentScore += data;
         });
     });
 
