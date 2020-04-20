@@ -12,10 +12,10 @@ router.post('/', async (req, res) =>{
     let decoded = jwtDecode(token);
     console.log(decoded.username);
     let user = await User.findOne({username: req.body.username});
-    user.score = user.score + int(req.body.scoreInfo);
+    user.Score = user.Score + int(req.body.scoreInfo);
     await user.save();
-    console.log(user.score)
-    res.status(200).send(user.score);
+    console.log(user.Score)
+    res.status(200).send(user.Score);
 });
 
 module.exports = router;
