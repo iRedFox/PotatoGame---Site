@@ -1,3 +1,4 @@
+const {User} = require('../models/user');
 const express = require('express');
 const mongoose = require('mongoose');
 const jwtDecode = require('jwt-decode');
