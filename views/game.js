@@ -59,7 +59,9 @@ async function countClicks(){
         console.log(response);
         response.json().then((data) => {
             currentScore = data;
-        });;
+        });
+    });
+
     const points = document.getElementById('coin-count').innerHTML = currentScore;
 }
 
