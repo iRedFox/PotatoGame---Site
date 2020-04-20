@@ -9,8 +9,9 @@ let ctx = c2d.getContext('2d');
 let img = new Image();
 
 img.src = '/potatoClick.gif';
+
 img.onload = function(){
-	ctx.drawImage(img, 5, 15);
+    ctx.drawImage(img, 5, 15);
 }
 
 function mouseMove(event) {
@@ -40,10 +41,10 @@ let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 
 let count = 0;
-async function countClicks(){
+function countClicks(){
 	// Move the image randomly.
-	let x = await Math.floor(Math.random()*400);
-	let y = await Math.floor(Math.random()*400);
+	let x = Math.floor(Math.random()*600);
+	let y = Math.floor(Math.random()*400);
 	button_click.style.top = x + 'px';
 	button_click.style.left = y + 'px';
     const points = document.getElementById('coin-count').innerHTML = ++count;

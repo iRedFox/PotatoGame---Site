@@ -141,6 +141,20 @@
 }
 
 
+
+img {
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#gameBackground{
+    background-color: blanchedalmond;
+}
+
+
 @keyframes shake {
     30% { transform: translate(3px, 2px) rotate(0deg); }
     40% { transform: translate(1px, -1px) rotate(1deg); }
@@ -150,6 +164,22 @@
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#logout-button{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    position: absolute;
+    width: auto;
+    font-size: 40px;
+    right: 10%;
+    float: right;
+}
+
+#tutorial {
+    position: absolute;
+    margin: 25px;
+    right: 3%;
+    bottom: 5%;
 }
 
 @-moz-keyframes rotate {

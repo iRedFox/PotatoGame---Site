@@ -5,11 +5,10 @@ const cookieParser = require('cookie-parser');
 const auth = require('../middleware/auth');
 
 router.use(cookieParser());
-
+//router.get('/', auth, (req, res) =>{
 router.get('/', auth, (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    console.log(decoded.username);
     res.render('game', {username : decoded.username});
 });
 
