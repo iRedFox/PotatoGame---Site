@@ -56,7 +56,7 @@ async function countClicks(){
     
     }
     const res = fetch(url, options);
-    const points = document.getElementById('coin-count').innerHTML = await JSON.stringify(res);
+    const points = document.getElementById('coin-count').innerHTML = await res;
 }
 
 
