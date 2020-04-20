@@ -15,6 +15,7 @@ router.post('/', async (req, res) =>{
     console.log(user.Score);
     user.Score = user.Score + Number(req.body.scoreInfo);
     console.log('after');
+    console.log('heres the body: ' + req.body.scoreInfo);
     console.log(user.Score);
     await user.save();
     console.log(user.Score);
