@@ -10,5 +10,5 @@ body(id='gameBackground' onload='init()')
 	img(id='tutorial' src='tutorial.png')
 	div(id='leaderboard')
 		each user in listOfUsers
-			h1 #{user.Score}
+			h1 #{user.username} #{user.Score}
 	script(src='/game.js')
