@@ -1,5 +1,3 @@
-import { setInterval } from "timers";
-
 console.log('The client javascript code is running..');
 
 let tutorial = document.getElementById('tutorial');
