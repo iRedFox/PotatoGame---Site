@@ -6,7 +6,7 @@ const auth = require('../middleware/auth');
 
 router.use(cookieParser());
 //router.get('/', auth, (req, res) =>{
-router.get('/', auth, (req, res) =>{
+router.get('/', auth, async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
     let listOfUsers = await User.find().sort({Score : -1}).limit(5);
