@@ -1,5 +1,8 @@
+import { setInterval } from "timers";
+
 console.log('The client javascript code is running..');
 
+let tutorial = document.getElementById('tutorial');
 let c2d = document.getElementById('potatoHitBox');
 let logoutButton = document.getElementById('logout-button');
 
@@ -15,6 +18,7 @@ img.onload = function(){
 }
 
 function init(){
+    setTimeout(hideTutorial, 15000); 
     // get current store on log in
     const url = 'http://134.122.81.113:80/clickRegistry';
     const options = {
@@ -100,4 +104,8 @@ logoutButton.onclick = async () => {
     if((await res).status === 200){
         window.location = '/';
     }
+}
+
+function hideTutorial(){
+    tutorial.style.display = 'none';
 }
