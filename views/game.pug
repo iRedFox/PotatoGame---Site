@@ -8,7 +8,9 @@ body(id='gameBackground' onload='init()')
 	canvas(id='potatoHitBox')
 	button(id='logout-button') #{username} تسجيل الخروج من 
 	img(id='tutorial' src='tutorial.png')
-	div(id='leaderboard')
-		each user in listOfUsers
-			h1 #{user.username} #{user.Score}
+	div(id='leaderboard-div')
+		img(id='leaderboard' src='leaderboard.png')
+		div(id='leaderboard-text')
+			each user in listOfUsers
+				h1 #{user.username} #{user.Score}
 	script(src='/game.js')
