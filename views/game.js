@@ -18,6 +18,20 @@ img.onload = function(){
 function init(){
     setTimeout(hideTutorial, 15000); 
     // get current store on log in
+    const url = 'http://134.122.81.113:80/getTop';
+    const options = {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    }
+    fetch(url, options)
+    .then((response) => {
+        return response.text();
+    })
+    .then((data) => {
+        console.log('We got the top players');
+    });
     const url = 'http://134.122.81.113:80/clickRegistry';
     const options = {
         method: 'GET',
@@ -27,7 +41,6 @@ function init(){
     }
     fetch(url, options)
     .then((response) => {
-        console.log(response);
         return response.text();
     })
     .then((data) => {
@@ -80,7 +93,6 @@ async function countClicks(){
     }
     fetch(url, options)
     .then((response) => {
-        console.log(response);
         return response.text();
     })
     .then((data) => {
