@@ -1,4 +1,6 @@
+const {User} = require('../models/user');
 const express = require('express');
+const mongoose = require('mongoose');
 const router = express.Router();
 const jwtDecode = require('jwt-decode');
 const cookieParser = require('cookie-parser');
