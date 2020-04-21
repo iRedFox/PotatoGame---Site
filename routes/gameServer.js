@@ -13,7 +13,6 @@ router.get('/', auth, async (req, res) =>{
     let decoded = jwtDecode(token);
     let listOfUsers = await User.find().sort({Score : -1}).limit(5);
     console.log(listOfUsers);
-    res.end();
     res.render('game', {username : decoded.username, listOfUsers : listOfUsers});
 });
 
