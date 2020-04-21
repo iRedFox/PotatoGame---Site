@@ -2,7 +2,7 @@ html
 	head
 		link(rel="stylesheet" type="text/css" href="./style.css")
 		title لعبة البطاطس2
-body(id='gameBackground')
+body(id='gameBackground' onload='init()')
 	img(id='coins' src='coin-icon.gif')
 	span(id='coin-count') 0
 	canvas(id='potatoHitBox')

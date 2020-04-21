@@ -19,4 +19,13 @@ router.post('/', async (req, res) =>{
     res.status(200).send(String(user.Score));
 });
 
+router.get('/', async (req, res) =>{
+    const token = req.cookies.access_token;
+    // decode the token to get the id.
+    let decoded = jwtDecode(token);
+    console.log(decoded.username);
+    let user = await User.findOne({username: decoded.username});
+    res.status(200).send(String(user.Score));
+});
+
 module.exports = router;

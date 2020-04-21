@@ -14,6 +14,28 @@ img.onload = function(){
     ctx.drawImage(img, 5, 15);
 }
 
+function init(){
+    // get current store on log in
+    const url = 'http://134.122.81.113:80/clickRegistry';
+    const options = {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    }
+    fetch(url, options)
+    .then((response) => {
+        console.log(response);
+        return response.text();
+    })
+    .then((data) => {
+        let currentScore = 0;
+        currentScore = data;
+        console.log('currentScore: ' + currentScore);
+        const points = document.getElementById('coin-count').innerHTML = currentScore;
+    });
+}
+
 function mouseMove(event) {
     let mouseX,
         mouseY;
@@ -61,7 +83,6 @@ async function countClicks(){
     })
     .then((data) => {
         let currentScore = 0;
-        console.log(data);
         currentScore = data;
         console.log('currentScore: ' + currentScore);
         const points = document.getElementById('coin-count').innerHTML = currentScore;
