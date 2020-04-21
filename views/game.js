@@ -18,20 +18,22 @@ img.onload = function(){
 function init(){
     setTimeout(hideTutorial, 15000); 
     // get current store on log in
-    const url = 'http://134.122.81.113:80/getTop';
-    const options = {
+    const url1 = 'http://134.122.81.113:80/getTop';
+    const options1 = {
         method: 'GET',
         headers:{
             'Content-Type': 'application/json'
         }
     }
-    fetch(url, options)
+    fetch(url1, options1)
     .then((response) => {
         return response.text();
     })
     .then((data) => {
         console.log('We got the top players');
     });
+
+    
     const url = 'http://134.122.81.113:80/clickRegistry';
     const options = {
         method: 'GET',
