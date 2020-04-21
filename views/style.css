@@ -190,8 +190,9 @@ img {
 }
 #leaderboard-div{
     position: relative;
-    text-align: center;
-    color: white;
+    margin: 25px;
+    right: 3%;
+    bottom: 5%;
 }
 #leaderboard-text{
     position: absolute;

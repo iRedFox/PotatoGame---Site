@@ -12,5 +12,5 @@ body(id='gameBackground' onload='init()')
 		img(id='leaderboard' src='leaderboard.png')
 		div(id='leaderboard-text')
 			each user in listOfUsers
-				h1 #{user.username} #{user.Score}
+				h1 #{user.username} #{user.Score} النقاط
 	script(src='/game.js')
