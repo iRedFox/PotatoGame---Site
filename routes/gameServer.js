@@ -9,7 +9,10 @@ router.use(cookieParser());
 router.get('/', auth, (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    res.render('game', {username : decoded.username});
+    let listOfUsers = await User.find().sort({Score : -1}).limit(5);
+    console.log(listOfUsers);
+    res.end();
+    res.render('game', {username : decoded.username, listOfUsers : listOfUsers});
 });
 
 
