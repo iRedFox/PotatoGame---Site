@@ -189,7 +189,6 @@ img {
     bottom: 5%;
 }
 #leaderboard-div{
-    position: relative;
     margin: 25px;
     right: 3%;
     bottom: 5%;
@@ -197,7 +196,7 @@ img {
 #leaderboard-text{
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 80%;
     transform: translate(-50%, -50%);
 }
 
