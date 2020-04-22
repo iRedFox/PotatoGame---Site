@@ -194,7 +194,10 @@ img {
     bottom: 5%;
 }
 #leaderboard-text{
+    font-family: 'Rakkas', cursive;
     position: absolute;
+    font-size: 30px;
+    color: aliceblue;
     top: 50%;
     left: 80%;
     transform: translate(-50%, -50%);
