@@ -67,9 +67,10 @@ scoreInfo = { defaultValue: 1 };
 
 setInterval(changeCanClick, 2000);
 
-if(canClick){
+
     
-    async function countClicks(){
+async function countClicks(){
+    if(canClick){
         // Move the image randomly.
         let x = Math.floor(Math.random()*600);
         let y = Math.floor(Math.random()*400);
@@ -95,11 +96,10 @@ if(canClick){
         });
         console.log(canClick);
         canClick = false;
-        console.log(canClick);
-    
+    }else{
+        return;
     }
-}else{
-    return;
+
 }
 
 function changeCanClick(){
