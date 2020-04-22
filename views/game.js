@@ -65,9 +65,6 @@ let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 scoreInfo = { defaultValue: 1 };
 
-setInterval(changeCanClick, 2000);
-
-
     
 async function countClicks(){
     if(canClick){
@@ -97,14 +94,12 @@ async function countClicks(){
         console.log(canClick);
         canClick = false;
     }else{
+        setTimeout(() => { canClick = true }, 1000);
         return;
     }
 
 }
 
-function changeCanClick(){
-    let canClick = true;
-}
 
 
 logoutButton.onclick = async () => {
