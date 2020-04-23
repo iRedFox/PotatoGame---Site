@@ -36,10 +36,22 @@
     transition: all 0.1s;
 }
 
-#login-box, #register-box{
+#login-box{
     font-family: 'Rakkas', cursive;
     border-radius: 50%;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height:300px;
+    font-size: 25px;
+}
+
+#register-box{
+    font-family: 'Rakkas', cursive;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #fa8980;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
