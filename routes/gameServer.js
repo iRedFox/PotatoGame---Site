@@ -7,7 +7,6 @@ const cookieParser = require('cookie-parser');
 const auth = require('../middleware/auth');
 
 router.use(cookieParser());
-//router.get('/', auth, (req, res) =>{
 router.get('/', auth, async (req, res) =>{
     let rank = 0;
     const token = req.cookies.access_token;
