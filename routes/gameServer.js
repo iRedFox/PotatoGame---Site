@@ -16,10 +16,10 @@ router.get('/', auth, async (req, res) =>{
     let listOfUsers = await User.find().sort({Score : -1});
     for(let i = 0; i < listOfUsers.length; i++){
         if(listOfUsers[i].username === decoded.username){
-            rank = i;
+            rank = i+1;
         }
     }
-    console.log(listOfUsers);
+    //console.log(listOfUsers);
     res.render('game', {username : decoded.username, rank : rank});
 });
 
