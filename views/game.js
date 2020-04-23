@@ -17,7 +17,7 @@ img.onload = function(){
 }
 
 function init(){
-    setTimeout(hideTutorial, 15000); 
+    setTimeout(hideTutorial, 5000); 
 
     const url = 'http://134.122.81.113:80/clickRegistry';
     const options = {
