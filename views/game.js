@@ -94,7 +94,7 @@ async function countClicks(){
         console.log(canClick);
         canClick = false;
     }else{
-        setTimeout(() => { canClick = true }, 250);
+        setTimeout(() => { canClick = true }, 150);
         return;
     }
 

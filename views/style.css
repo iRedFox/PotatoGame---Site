@@ -22,9 +22,8 @@
 #potatoHitBox{
     position: absolute;
     display: block;
-    top: 40px; 
-    left: 40px;
-    right: 30px;
+    top: 70px; 
+    left: 30%;
     width: 220px;
     transition: all 0.1s;
 }
@@ -216,4 +215,3 @@ img {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
 }
-
