@@ -9,11 +9,18 @@ const auth = require('../middleware/auth');
 router.use(cookieParser());
 //router.get('/', auth, (req, res) =>{
 router.get('/', auth, async (req, res) =>{
+    let rank = 0;
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    let listOfUsers = await User.find().sort({Score : -1}).limit(5);
+    // get list of users top 5 points
+    let listOfUsers = await User.find().sort({Score : -1});
+    for(let i = 0; i < listOfUsers.length; i++){
+        if(listOfUsers[i].username === decoded.username){
+            rank = i;
+        }
+    }
     console.log(listOfUsers);
-    res.render('game', {username : decoded.username, listOfUsers : listOfUsers});
+    res.render('game', {username : decoded.username, rank : rank});
 });
 
 

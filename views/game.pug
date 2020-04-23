@@ -6,10 +6,10 @@ body(id='gameBackground' onload='init()')
 	img(id='coins' src='coin-icon.gif')
 	span(id='coin-count') 0
 	canvas(id='potatoHitBox')
-	button(id='logout-button') #{username} تسجيل الخروج من 
+	button(id='logout-button') #{username} ##{rank} تسجيل الخروج من 
 	img(id='tutorial' src='tutorial.png')
-	div(id='leaderboard-div')
-		img(id='leaderboard' src='leaderboard.png')
+	//div(id='leaderboard-div')
+	//	img(id='leaderboard' src='leaderboard.png')
 		div(id='leaderboard-text')
 			each user in listOfUsers
 				br
