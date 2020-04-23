@@ -24,6 +24,7 @@
     display: block;
     top: 40px; 
     left: 40px;
+    right: 30px;
     width: 220px;
     transition: all 0.1s;
 }
