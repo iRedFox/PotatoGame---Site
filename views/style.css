@@ -8,6 +8,14 @@
     height:  50%;
 }
 
+
+#box{
+    background-color: #f44336;
+    width: 1270px;
+    height: 950px;
+    left: 25%;
+}
+
 #coin-icon{
     vertical-align: middle;
     width: 75px;
