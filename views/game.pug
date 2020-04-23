@@ -10,9 +10,9 @@ body(id='gameBackground' onload='init()')
 	img(id='tutorial' src='tutorial.png')
 	//div(id='leaderboard-div')
 	//	img(id='leaderboard' src='leaderboard.png')
-		div(id='leaderboard-text')
-			each user in listOfUsers
-				br
-				h1 #{user.username} #{user.Score}
-				br
+	//	div(id='leaderboard-text')
+	//		each user in listOfUsers
+	//			br
+	//			h1 #{user.username} #{user.Score}
+	//			br
 	script(src='/game.js')
