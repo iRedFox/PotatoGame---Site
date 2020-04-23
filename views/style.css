@@ -13,8 +13,6 @@
     position: relative;
     width: 1270px;
     height: 950px;
-    background:#CCC;
-    background-color: #f44336;
 }
 
 #coin-icon{
@@ -32,6 +30,8 @@
     border-radius:25px;
     position: absolute;
     display: block;
+    top: 70px; 
+    left: 30%;
     width: 220px;
     transition: all 0.1s;
 }
