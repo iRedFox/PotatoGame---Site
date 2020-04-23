@@ -53,7 +53,7 @@
     position: absolute;
     bottom: 70%;
     right: 49%;
-    background: rgb(250, 121, 121);
+    background: blanchedalmond;
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     font-size: 45px;
@@ -65,7 +65,7 @@
     position: absolute;
     bottom: 70%;
     right: 30%;
-    background: blanchedalmond;
+    background: rgb(250, 121, 121);
     box-shadow: 0px 0px 0px transparent;
     border: 0px solid transparent;
     font-size: 45px;
