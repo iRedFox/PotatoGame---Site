@@ -10,10 +10,11 @@
 
 
 #box{
-    background-color: #f44336;
+    position: relative;
     width: 1270px;
     height: 950px;
-    left: 25%;
+    background:#CCC;
+    background-color: #f44336;
 }
 
 #coin-icon{
@@ -28,10 +29,9 @@
 }
 
 #potatoHitBox{
+    border-radius:25px;
     position: absolute;
     display: block;
-    top: 70px; 
-    left: 30%;
     width: 220px;
     transition: all 0.1s;
 }
