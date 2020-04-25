@@ -59,6 +59,12 @@
     font-size: 45px;
 }
 
+#rank{
+    font-family: 'Rakkas', cursive;
+    font-size: 15px;
+}
+
+
 #register{
     font-family: 'Rakkas', cursive;
     border-radius: 30%;
