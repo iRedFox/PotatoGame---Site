@@ -61,7 +61,7 @@
 
 #rank{
     font-family: 'Rakkas', cursive;
-    font-size: 15px;
+    font-size: 35px;
 }
 
 
@@ -183,10 +183,9 @@ img {
     font-family: 'Rakkas', cursive;
     background: whitesmoke;
     position: absolute;
+    bottom: 10px;
     width: auto;
     font-size: 40px;
-    right: 10%;
-    float: right;
 }
 
 #tutorial {
