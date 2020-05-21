@@ -9,6 +9,7 @@ const users = require('./routes/users');
 const clicks = require('./routes/clickPotato');
 const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
+const leaderboard = require('./routes/leaderboard');
 const cookieParser = require('cookie-parser');
 
 const port = 80;
@@ -27,6 +28,7 @@ app.use('/login', auth);
 app.use('/logout', logout);
 app.use('/game', game);
 app.use('/clickRegistry', clicks);
+app.user('/leaderboard', leaderboard);
 
 //mongodb://localhost:27017/potato
 mongoose.connect('mongodb://localhost:27017/potato')
