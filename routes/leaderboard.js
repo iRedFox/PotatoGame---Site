@@ -11,8 +11,8 @@ router.get('/', auth, async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
     // get list of users top 5 points
-    let listOfUsers = await User.find().sort({Score : -1});
-    console.log(listOfUsers);
+    let listOfUsers = await User.find().sort({Score : -1}).limit(5);
+    //console.log(listOfUsers);
     res.render('leaderboard', {listOfUsers : listOfUsers});
 });
 

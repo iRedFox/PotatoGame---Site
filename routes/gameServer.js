@@ -11,7 +11,6 @@ router.get('/', auth, async (req, res) =>{
     let rank = 0;
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    // get list of users top 5 points
     let listOfUsers = await User.find().sort({Score : -1});
     for(let i = 0; i < listOfUsers.length; i++){
         if(listOfUsers[i].username === decoded.username){
