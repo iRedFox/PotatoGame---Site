@@ -28,7 +28,7 @@ app.use('/login', auth);
 app.use('/logout', logout);
 app.use('/game', game);
 app.use('/clickRegistry', clicks);
-app.user('/leaderboard', leaderboard);
+app.use('/leaderboard', leaderboard);
 
 //mongodb://localhost:27017/potato
 mongoose.connect('mongodb://localhost:27017/potato')
