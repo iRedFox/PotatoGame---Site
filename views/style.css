@@ -183,7 +183,6 @@ img {
 #logout-button{
     font-family: 'Rakkas', cursive;
     background: whitesmoke;
-    position: absolute;
     width: auto;
     font-size: 40px;
 }
