@@ -34,7 +34,7 @@ function init(){
         let currentScore = 0;
         currentScore = data;
         console.log('currentScore: ' + currentScore);
-        const points = document.getElementById('coin-count').innerHTML = currentScore;
+        const points = document.getElementById('coin-count').innerHTML = currentScore + "   نقاطك   ";
     });
 }
 
