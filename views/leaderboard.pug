@@ -3,10 +3,11 @@ html
 		link(rel="stylesheet" type="text/css" href="./style.css")
 		title لعبة البطاطس2 - اعلى 5 لاعبين
 body(id='gameBackground')
+	a(href='/game' id='leaderboard-butt') أضغط للإنتقال للعبة
 	div(id='leaderboard-div')
 		img(id='leaderboard' src='leaderboard.png')
 		div(id='leaderboard-text')
 			each user in listOfUsers
 				br
-				h1 #{user.username} #{user.Score}
+				div #{user.username} -- #{user.Score}
 				br

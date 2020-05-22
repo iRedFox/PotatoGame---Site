@@ -210,9 +210,9 @@ img {
     position: absolute;
     font-size: 30px;
     color: aliceblue;
-    line-height: 1.5mm;
-    top: 50%;
-    left: 80%;
+    line-height: 4.5mm;
+    top: 60%;
+    left: 78%;
     transform: translate(-50%, -50%);
 }
 
