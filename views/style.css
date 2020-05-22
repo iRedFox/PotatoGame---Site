@@ -195,25 +195,27 @@ img {
 }
 
 #leaderboard {
-    position: absolute;
-    margin: 25px;
-    right: 3%;
-    bottom: 5%;
+    display: block;
+    margin-left:  auto;
+    margin-right: auto;
+    width: 30%;
 }
-#leaderboard-div{
-    margin: 25px;
-    right: 3%;
-    bottom: 5%;
-}
+
 #leaderboard-text{
     font-family: 'Rakkas', cursive;
-    position: absolute;
-    font-size: 30px;
+    font-size: 40px;
     color: aliceblue;
-    line-height: 4.5mm;
-    top: 60%;
-    left: 78%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+#leaderboard-butt{
+    font-family: 'Rakkas', cursive;
+    font-size: 30px;
+    color: black;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 @-moz-keyframes rotate {

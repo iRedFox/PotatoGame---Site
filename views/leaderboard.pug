@@ -4,10 +4,9 @@ html
 		title لعبة البطاطس2 - اعلى 5 لاعبين
 body(id='gameBackground')
 	a(href='/game' id='leaderboard-butt') أضغط للإنتقال للعبة
-	div(id='leaderboard-div')
-		img(id='leaderboard' src='leaderboard.png')
-		div(id='leaderboard-text')
-			each user in listOfUsers
-				br
-				div #{user.username} -- #{user.Score}
-				br
+	img(id='leaderboard' src='leaderboard.png')
+	div(id='leaderboard-text')
+		each user in listOfUsers
+			br
+			div #{user.username} -- #{user.Score}
+			br
