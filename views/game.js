@@ -69,8 +69,8 @@ scoreInfo = { defaultValue: 1 };
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
-        let x = Math.floor(Math.random()*950) | 0;
-        let y = Math.floor(Math.random()*1270) | 0;
+        let x = Math.floor(Math.random()*750) | 0;
+        let y = Math.floor(Math.random()*1070) | 0;
         button_click.style.top = x + 'px';
         button_click.style.left = y + 'px';
         const url = 'http://134.122.81.113:80/clickRegistry';
