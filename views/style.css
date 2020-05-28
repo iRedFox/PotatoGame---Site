@@ -134,6 +134,14 @@
     font-size: 30px;
 }
 
+#potatos{
+    width: 100%; 
+    height: 100%; 
+    position: fixed; 
+    left: 0px; 
+    top: 0px; 
+    background-color: blanchedalmond;
+}
 
 #potato1, #potato2, #potato3, #potato4{
     width: 160px;
