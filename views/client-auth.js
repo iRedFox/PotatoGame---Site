@@ -118,7 +118,12 @@ loginButton.onclick = async () => {
     if((await res).status == 200){
         window.location = '/game';
     }
-
+    if((await res).status == 400){
+        (await res).text().then(function(test){
+            alertMessage.innerHTML = test;
+            alertDiv.style.display = 'block';
+        });
+    }
 }
 nameLogin.value = "";
 passLogin.value = "";
