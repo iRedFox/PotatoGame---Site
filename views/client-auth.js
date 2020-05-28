@@ -148,6 +148,9 @@ registerButton.onclick = async () => {
     if((await res).status == 200){
         window.location = '/game';
     }
+    if((await res).status == 400){
+        alertMessage.innerHTML =  (await res).statusText;
+    }
 };
 
 function hideDiv(){
