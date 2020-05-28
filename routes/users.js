@@ -10,7 +10,7 @@ router.post('/', async (req, res) =>{
     if (error) return res.status(400).send(error.details[0].message);
     console.log('validated');
     let user = await User.findOne({username: req.body.username});
-    if (user) return res.status(400).send('User already registered.');
+    if (user) return res.status(400).send('هذا المستخدم مسجل مسبقاً');
     user = new User({
         username: req.body.username,
         password: req.body.password,

@@ -151,11 +151,9 @@ registerButton.onclick = async () => {
     if((await res).status == 400){
         (await res).text().then(function(test){
             alertMessage.innerHTML = test;
+            alertDiv.style.display = 'block';
         });
     }
-    response.text().then(function(text) {
-        poemDisplay.textContent = text;
-      });
 };
 
 function hideDiv(){
