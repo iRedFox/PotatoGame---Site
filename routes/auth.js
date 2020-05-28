@@ -11,10 +11,10 @@ router.post('/', async (req, res) =>{
     if (error) return res.status(400).send(error.details[0].message);
 
     let user = await User.findOne({username: req.body.username});
-    if(!user) return res.status(400).send('Invalid username or password.');
+    if(!user) return res.status(400).send('إسم المستخدم او الباسوورد خاطئ.');
 
     const validPassword = await bcrypt.compare(req.body.password, user.password);
-    if(!validPassword) return res.status(400).send('Invalid username or password.');
+    if(!validPassword) return res.status(400).send('إسم المستخدم او الباسوورد خاطئ.');
 
     console.log('logged in as: ' + user.username);
     const token = user.generateAuthToken();
