@@ -128,6 +128,7 @@ passLogin.value = "";
 registerButton.onclick = async () => {
     let info = {}
     if(!isNaN(nameRegister.value) || nameRegister.value === "" || passRegister.value === ""){
+        alert('الرجاء كتابة اسم المستخدم او باسووردك');
         alertMessage.innerHTML = 'الرجاء كتابة اسم المستخدم او باسووردك';
         alertDiv.style.display = 'block';
         return;
