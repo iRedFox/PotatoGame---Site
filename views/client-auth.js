@@ -149,8 +149,13 @@ registerButton.onclick = async () => {
         window.location = '/game';
     }
     if((await res).status == 400){
-        alertMessage.innerHTML =  (await res).text();
+        (await res).text().then(function(test){
+            alertMessage.innerHTML = test;
+        });
     }
+    response.text().then(function(text) {
+        poemDisplay.textContent = text;
+      });
 };
 
 function hideDiv(){
