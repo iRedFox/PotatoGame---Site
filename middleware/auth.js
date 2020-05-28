@@ -4,7 +4,7 @@ const config = require('config');
 module.exports = function (req, res, next){
     console.log(req.cookies);
     const token = req.cookies.access_token;
-    if(!token) res.render('index', {});
+    if(!token) res.redirect('/');
 
     try{
         const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
