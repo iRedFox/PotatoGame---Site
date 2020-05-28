@@ -149,7 +149,7 @@ registerButton.onclick = async () => {
         window.location = '/game';
     }
     if((await res).status == 400){
-        alertMessage.innerHTML =  res.json;
+        alertMessage.innerHTML =  (await res).json;
     }
 };
 
