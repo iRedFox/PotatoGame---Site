@@ -19,7 +19,7 @@ img.onload = function(){
 function init(){
     setTimeout(hideTutorial, 5000); 
 
-    const url = 'http://134.122.81.113:80/clickRegistry';
+    const url = 'http://b6a6s.io/clickRegistry';
     const options = {
         method: 'GET',
         headers:{
@@ -73,7 +73,7 @@ async function countClicks(){
         let y = Math.floor(Math.random()*920) | 0;
         button_click.style.top = x + 'px';
         button_click.style.left = y + 'px';
-        const url = 'http://134.122.81.113:80/clickRegistry';
+        const url = 'http://b6a6s.io/clickRegistry';
         const options = {
             method: 'POST',
             body: JSON.stringify(scoreInfo),
@@ -103,7 +103,7 @@ async function countClicks(){
 
 
 logoutButton.onclick = async () => {
-    const url = 'http://134.122.81.113:80/logout';
+    const url = 'http://b6a6s.io/logout';
     const options = {
         method: 'GET'
     }

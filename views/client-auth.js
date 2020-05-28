@@ -105,7 +105,7 @@ loginButton.onclick = async () => {
     }
     info.username = nameLogin.value;
     info.password = passLogin.value;
-    const url = 'http://134.122.81.113:80/login';
+    const url = 'http://b6a6s.io/login';
     const options = {
         method: 'POST',
         body: JSON.stringify(info),
@@ -139,7 +139,7 @@ registerButton.onclick = async () => {
     }
     info.username = nameRegister.value;
     info.password = passRegister.value;
-    const url = 'http://134.122.81.113:80/register';
+    const url = 'http://b6a6s.io/register';
     const options = {
         method: 'POST',
         body: JSON.stringify(info),
