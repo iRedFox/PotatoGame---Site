@@ -1,5 +1,4 @@
 console.log('The client javascript code is running..');
-const sound = require('play-sound');
 
 let tutorial = document.getElementById('tutorial');
 let c2d = document.getElementById('potatoHitBox');
@@ -74,9 +73,6 @@ async function countClicks(){
         let y = Math.floor(Math.random()*920) | 0;
         button_click.style.top = x + 'px';
         button_click.style.left = y + 'px';
-        sound.play('./views/click.wav', err =>{
-            if (err) console.log('error could not find the sound');
-        });
         const url = 'http://b6a6s.io/clickRegistry';
         const options = {
             method: 'POST',

@@ -11,7 +11,6 @@ const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
 const leaderboard = require('./routes/leaderboard');
 const cookieParser = require('cookie-parser');
-
 const port = 80;
 
 if(!(config.get('jwtPrivateKey'))){
