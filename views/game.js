@@ -16,7 +16,7 @@ img.onload = function(){
     ctx.drawImage(img, 5, 15);
 }
 
-const clickSound = new sound("./views/click.wav");
+const clickSound = new sound("./views/click.mp3");
 
 // constructor to create whatever sound i want
 function sound(src){
