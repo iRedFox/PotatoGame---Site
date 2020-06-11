@@ -2,7 +2,7 @@ const {User} = require('../models/user');
 const express = require('express');
 const mongoose = require('mongoose');
 const jwtDecode = require('jwt-decode');
-const sound = require('play-sound');
+const sound = require('play-sound')(opts = {});
 const router = express.Router();
 const cookieParser = require('cookie-parser');
 router.use(cookieParser());
