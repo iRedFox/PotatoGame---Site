@@ -2,6 +2,8 @@ console.log('The client javascript code is running..');
 
 let tutorial = document.getElementById('tutorial');
 let c2d = document.getElementById('potatoHitBox');
+let audioClick = document.createElement('audio');
+audioClick.src = './views/click.wav';
 let logoutButton = document.getElementById('logout-button');
 let canClick = true;
 
@@ -69,6 +71,7 @@ scoreInfo = { defaultValue: 1 };
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
+        audioClick.play();
         let x = Math.floor(Math.random()*650) | 0;
         let y = Math.floor(Math.random()*920) | 0;
         button_click.style.top = x + 'px';

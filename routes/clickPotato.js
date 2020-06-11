@@ -2,7 +2,6 @@ const {User} = require('../models/user');
 const express = require('express');
 const mongoose = require('mongoose');
 const jwtDecode = require('jwt-decode');
-const sound = require('play-sound')(opts = {});
 const router = express.Router();
 const cookieParser = require('cookie-parser');
 router.use(cookieParser());
@@ -16,9 +15,6 @@ router.post('/', async (req, res) =>{
     console.log(user.Score);
     user.Score = user.Score + Number(req.body.defaultValue);
     console.log(user.Score);
-    sound.play('click.wav', err =>{
-        if (err) console.log('error could not find the sound ' + err);
-    });
     await user.save();
     res.status(200).send(String(user.Score));
 });
