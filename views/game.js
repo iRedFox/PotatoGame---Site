@@ -2,8 +2,6 @@ console.log('The client javascript code is running..');
 
 let tutorial = document.getElementById('tutorial');
 let c2d = document.getElementById('potatoHitBox');
-let audioClick = document.createElement('audio');
-audioClick.src = './views/click.wav';
 let logoutButton = document.getElementById('logout-button');
 let canClick = true;
 
@@ -17,6 +15,31 @@ img.src = '/potatoClick.gif';
 img.onload = function(){
     ctx.drawImage(img, 5, 15);
 }
+
+const clickSound = new sound("./views/click.wav");
+
+// constructor to create whatever sound i want
+function sound(src){
+    this.sound = document.createElement("audio");
+    // source
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+
+    document.body.appendChild(this.sound);
+
+    // play the sound
+    this.play = function(){
+        this.sound.play();
+    }
+    // stop the sound
+    this.stop = function(){
+        this.sound.pause();
+    }
+
+}
+
 
 function init(){
     setTimeout(hideTutorial, 5000); 
@@ -71,7 +94,7 @@ scoreInfo = { defaultValue: 1 };
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
-        audioClick.play();
+        clickSound.play();
         let x = Math.floor(Math.random()*650) | 0;
         let y = Math.floor(Math.random()*920) | 0;
         button_click.style.top = x + 'px';
