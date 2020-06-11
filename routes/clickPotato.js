@@ -16,8 +16,8 @@ router.post('/', async (req, res) =>{
     console.log(user.Score);
     user.Score = user.Score + Number(req.body.defaultValue);
     console.log(user.Score);
-    sound.play('./views/click.wav', err =>{
-        if (err) console.log('error could not find the sound');
+    sound.play('click.wav', err =>{
+        if (err) console.log('error could not find the sound ' + err);
     });
     await user.save();
     res.status(200).send(String(user.Score));
