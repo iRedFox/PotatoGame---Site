@@ -24,6 +24,7 @@ window.onload = async() => {
         console.log(data);
         imgSkin = data;
         img.src = imgSkin;
+    }
 }
 
 img.onload = function(){
