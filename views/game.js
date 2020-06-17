@@ -17,9 +17,6 @@ window.onload = async() => {
     const options = {
         method: 'GET'
     }
-    const options = {
-        method: 'GET'
-    }
     const res = fetch(url, options);
     console.log(imgSkin);
     imgSkin = await res;
