@@ -42,7 +42,7 @@ function sound(src){
 }
 
 
-async function init(){
+function init(){
     setTimeout(hideTutorial, 5000); 
     const url = 'http://b6a6s.io/clickRegistry';
     const options = {
