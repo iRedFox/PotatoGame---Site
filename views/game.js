@@ -18,8 +18,8 @@ window.onload = async() => {
         method: 'GET'
     }
     const res = fetch(url, options);
-    console.log(res.json());
-    imgSkin = res.json();
+    console.log((await res).json);
+    imgSkin = (await res).json;
 }
 
 img.onload = function(){
