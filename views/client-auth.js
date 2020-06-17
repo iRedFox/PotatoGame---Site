@@ -73,7 +73,7 @@ img1.onload = function(){
 
 loginDiv.style.display = 'block';
 registerDiv.style.display = 'none';
-alertDiv.style.display = 'none';
+alertDiv.style.display = 'block';
 
 // Login and register selection.
 loginSelection.onclick = () => {
