@@ -10,7 +10,10 @@ c2d.height = 125;
 let ctx = c2d.getContext('2d');
 let img = new Image();
 
-img.src = '/potatoClick.gif';
+// here is the default skin.
+let imgSkin = '';
+
+img.src = imgSkin;
 
 img.onload = function(){
     ctx.drawImage(img, 5, 15);
@@ -79,7 +82,7 @@ function mouseMoveOut(event) {
     // determine where mouse is
     mouseX = event.pageX;
     mouseY = event.pageY;
-    img.src = '/potatoClick.gif';
+    img.src = imgSkin;
     ctx.clearRect(0, 0, c2d.width, c2d.height);
 }
 c2d.addEventListener("mousemove", mouseMove, false);

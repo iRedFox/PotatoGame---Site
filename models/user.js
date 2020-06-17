@@ -16,7 +16,11 @@ const userSchema = new mongoose.Schema({
         minlength: 5,
         maxlength: 1024,
     },
-    Score: Number
+    Score: Number,
+    imgSrc: {
+        type: String,
+        default: '/potatoClick.gif'
+    }
 })
 
 userSchema.methods.generateAuthToken = function(){

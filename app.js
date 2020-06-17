@@ -9,6 +9,7 @@ const users = require('./routes/users');
 const clicks = require('./routes/clickPotato');
 const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
+const game = require('./routes/getSkin');
 const leaderboard = require('./routes/leaderboard');
 const cookieParser = require('cookie-parser');
 const port = 80;
@@ -26,6 +27,7 @@ app.use('/register', users);
 app.use('/login', auth);
 app.use('/logout', logout);
 app.use('/game', game);
+app.use('/getSkin', skin);
 app.use('/clickRegistry', clicks);
 app.use('/leaderboard', leaderboard);
 
