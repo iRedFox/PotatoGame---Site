@@ -7,11 +7,9 @@ const cookieParser = require('cookie-parser');
 const auth = require('../middleware/auth');
 
 router.use(cookieParser());
-router.get('/', auth, async (req, res) =>{
-    let rank = 0;
+router.get('/', async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    let listOfUsers = await User.find().sort({Score : -1});
     //console.log(listOfUsers);
     res.render('test', {username : decoded.username});
 });
@@ -22,7 +20,9 @@ router.post('/', async (req, res) =>{
     let decoded = jwtDecode(token);
     console.log(decoded.username);
     let user = await User.findOne({username: decoded.username});
+    console.log("Before " + user.imgSrc);
     user.imgSrc = req.body.ghostSkin;
+    console.log("Updated " + user.imgSrc);
     await user.save();
     res.end();
 });
