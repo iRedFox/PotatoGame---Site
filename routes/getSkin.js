@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) =>{
     let skinSource = await User.find({},{imgSrc : 1});
-    console.log(skinSource);
+    console.log(skinSource[0].imgSrc);
 });
 
 
