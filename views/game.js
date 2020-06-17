@@ -20,7 +20,7 @@ window.onload = async() => {
     const res = await fetch(url, options);
     if (res.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
-        let data = await res.json();
+        let data = await res.text();
         console.log(data);
         imgSkin = data;
         img.src = imgSkin;
