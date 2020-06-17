@@ -12,8 +12,20 @@ let img = new Image();
 
 // here is the default skin.
 let imgSkin = '';
-
-img.src = imgSkin;
+window.onload = async() => {
+    const url = 'http://b6a6s.io/getSkin';
+    const options = {
+        method: 'GET'
+    }
+    const options = {
+        method: 'GET'
+    }
+    const res = fetch(url, options);
+    console.log(imgSkin);
+    imgSkin = await res;
+    console.log(imgSkin);
+    img.src = imgSkin;
+}
 
 img.onload = function(){
     ctx.drawImage(img, 5, 15);
