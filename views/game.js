@@ -17,9 +17,13 @@ window.onload = async() => {
     const options = {
         method: 'GET'
     }
-    const res = fetch(url, options);
-    console.log((await res).json);
-    imgSkin = (await res).json;
+    const res = await fetch(url, options);
+    if (res.ok) { // if HTTP-status is 200-299
+        // get the response body (the method explained below)
+        let data = await response.json();
+        console.log(data);
+        imgSkin = data;
+        img.src = imgSkin;
 }
 
 img.onload = function(){
