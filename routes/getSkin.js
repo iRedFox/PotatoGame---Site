@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const router = express.Router();
 
 router.get('/', async (req, res) =>{
-    let skinSource = await User.find(imgSrc);
+    let skinSource = await User.find({imgSrc});
     console.log(skinSource);
 });
 
