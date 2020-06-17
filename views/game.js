@@ -12,20 +12,6 @@ let img = new Image();
 
 // here is the default skin.
 let imgSkin = '';
-window.onload = async() => {
-    const url = 'http://b6a6s.io/getSkin';
-    const options = {
-        method: 'GET'
-    }
-    const res = await fetch(url, options);
-    if (res.ok) { // if HTTP-status is 200-299
-        // get the response body (the method explained below)
-        let data = await res.text();
-        console.log(data);
-        imgSkin = data;
-        img.src = imgSkin;
-    }
-}
 
 img.onload = function(){
     ctx.drawImage(img, 5, 15);
@@ -58,7 +44,6 @@ function sound(src){
 
 function init(){
     setTimeout(hideTutorial, 5000); 
-
     const url = 'http://b6a6s.io/clickRegistry';
     const options = {
         method: 'GET',
@@ -76,6 +61,20 @@ function init(){
         console.log('currentScore: ' + currentScore);
         const points = document.getElementById('coin-count').innerHTML = currentScore + "     نقاطك     ";
     });
+    window.onload = async() => {
+        const url = 'http://b6a6s.io/getSkin';
+        const options = {
+            method: 'GET'
+        }
+        const res = await fetch(url, options);
+        if (res.ok) { // if HTTP-status is 200-299
+            // get the response body (the method explained below)
+            let data = await res.text();
+            console.log(data);
+            imgSkin = data;
+            img.src = imgSkin;
+        }
+    }
 }
 
 function mouseMove(event) {
