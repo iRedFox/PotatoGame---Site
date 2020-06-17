@@ -61,11 +61,11 @@ function init(){
         console.log('currentScore: ' + currentScore);
         const points = document.getElementById('coin-count').innerHTML = currentScore + "     نقاطك     ";
     });
-    const url = 'http://b6a6s.io/getSkin';
-    const options = {
+    const url1 = 'http://b6a6s.io/getSkin';
+    const options1 = {
         method: 'GET'
     }
-    const res = await fetch(url, options);
+    const res = await fetch(url1, options1);
     if (res.ok) { // if HTTP-status is 200-299
         // get the response body (the method explained below)
         let data = await res.text();
