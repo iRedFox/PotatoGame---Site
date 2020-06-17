@@ -16,5 +16,16 @@ router.get('/', auth, async (req, res) =>{
     res.render('test', {username : decoded.username});
 });
 
+router.post('/', async (req, res) =>{
+    const token = req.cookies.access_token;
+    // decode the token to get the id.
+    let decoded = jwtDecode(token);
+    console.log(decoded.username);
+    let user = await User.findOne({username: decoded.username});
+    user.imgSrc = req.body.ghostSkin;
+    await user.save();
+    res.end();
+});
+
 
 module.exports = router;
