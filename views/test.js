@@ -1,5 +1,5 @@
 const testbutton = document.getElementById('test-buy');
-testbutton.onclick = async () =>{
+testbutton.onclick = () => {
     testSkin = { ghostSkin: '/potatoClickScared.gif' };
     const url = 'http://b6a6s.io/skinStore';
     const options = {

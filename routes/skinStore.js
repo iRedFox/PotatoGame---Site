@@ -5,12 +5,11 @@ const router = express.Router();
 const jwtDecode = require('jwt-decode');
 const cookieParser = require('cookie-parser');
 const auth = require('../middleware/auth');
-
 router.use(cookieParser());
+
 router.get('/', async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    //console.log(listOfUsers);
     res.render('test', {username : decoded.username});
 });
 
