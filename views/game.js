@@ -65,14 +65,15 @@ function init(){
     const options1 = {
         method: 'GET'
     }
-    const res = await fetch(url1, options1);
-    if (res.ok) { // if HTTP-status is 200-299
-        // get the response body (the method explained below)
-        let data = await res.text();
+    fetch(url1, options1)
+    .then((res) => {
+        return res.text();
+    })
+    .then((data) => {
         console.log(data);
         imgSkin = data;
         img.src = imgSkin;
-    }
+    });
 }
 
 function mouseMove(event) {
