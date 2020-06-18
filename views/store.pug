@@ -3,10 +3,13 @@ html
 		link(rel="stylesheet" type="text/css" href="./style.css")
 		title لعبة البطاطس2
 body(id='gameBackground')
-	img(src='/potatoClick.gif')
-	h1 Default Skin
-	button(id='default-choice') إختيار
-	img(src='/potatoClickTeto.gif')
-	h1 Ghost Skin
-	button(id='test-buy') شراء
+	div(id='defaultSkin')
+		img(src='/potatoClick.gif')
+		h1 Default Skin
+		button(id='default-choice') إختيار
+	br
+	div(id='ghostSkin')
+		img(src='/potatoClickTeto.gif')
+		h1 Ghost Skin
+		button(id='test-buy') شراء
 	script(src='/store.js')
