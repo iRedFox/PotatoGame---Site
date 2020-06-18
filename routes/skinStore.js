@@ -11,6 +11,7 @@ router.get('/', async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
     let user = await User.findOne({username: decoded.username});
+    console.log(user.purchasedSkins);
     res.render('store', {skins : user.purchasedSkins});
 });
 
