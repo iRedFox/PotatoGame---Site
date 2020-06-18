@@ -10,5 +10,4 @@ testbutton.onclick = async () => {
         },
     }
     fetch(url, options)
-    console.log('testing the stuff');
 }

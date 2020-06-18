@@ -13,7 +13,8 @@ router.get('/', async (req, res) =>{
     res.render('store', {username : decoded.username});
 });
 
-router.post('/', async (req, res) =>{
+// Updating skin
+router.put('/', async (req, res) =>{
     const token = req.cookies.access_token;
     // decode the token to get the id.
     let decoded = jwtDecode(token);
@@ -22,6 +23,19 @@ router.post('/', async (req, res) =>{
     console.log("Changing " + decoded.username + " Before: " + user.imgSrc);
     user.imgSrc = req.body.ghostSkin;
     console.log("Updated " + decoded.username + " After: " + user.imgSrc);
+    await user.save();
+    res.end();
+});
+
+// Purchasing a skin
+router.post('/', async (req, res) =>{
+    const token = req.cookies.access_token;
+    // decode the token to get the id.
+    let decoded = jwtDecode(token);
+    console.log(decoded.username);
+    let user = await User.findOne({username: decoded.username});
+    user.purchasedSkins.push(req.body.ghostSkin);
+    console.log("Added " + req.body.ghostSkin + " to > " + user.purchasedSkins);
     await user.save();
     res.end();
 });
