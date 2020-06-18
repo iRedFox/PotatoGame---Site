@@ -14,8 +14,6 @@ ghostButton.onclick = async () => {
         },
     }
     fetch(url, options)
-    ghostChoice.style.display = 'block';
-    ghostButton.style.display = 'none';
 }
 
 ghostChoice.onclick = async () => {
