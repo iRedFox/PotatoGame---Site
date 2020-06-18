@@ -19,9 +19,9 @@ router.post('/', async (req, res) =>{
     let decoded = jwtDecode(token);
     console.log(decoded.username);
     let user = await User.findOne({username: decoded.username});
-    console.log("Before " + user.imgSrc);
+    console.log("Changing " + decoded.username + " Before: " + user.imgSrc);
     user.imgSrc = req.body.ghostSkin;
-    console.log("Updated " + user.imgSrc);
+    console.log("Updated " + decoded.username + " After: " + user.imgSrc);
     await user.save();
     res.end();
 });
