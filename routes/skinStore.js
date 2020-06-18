@@ -10,7 +10,7 @@ router.use(cookieParser());
 router.get('/', async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    res.render('test', {username : decoded.username});
+    res.render('store', {username : decoded.username});
 });
 
 router.post('/', async (req, res) =>{
