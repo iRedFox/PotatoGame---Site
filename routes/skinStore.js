@@ -21,7 +21,7 @@ router.put('/', async (req, res) =>{
     console.log(decoded.username);
     let user = await User.findOne({username: decoded.username});
     console.log("Changing " + decoded.username + " Before: " + user.imgSrc);
-    user.imgSrc = req.body.ghostSkin;
+    user.imgSrc = req.body.skin;
     console.log("Updated " + decoded.username + " After: " + user.imgSrc);
     await user.save();
     res.end();
@@ -34,8 +34,8 @@ router.post('/', async (req, res) =>{
     let decoded = jwtDecode(token);
     console.log(decoded.username);
     let user = await User.findOne({username: decoded.username});
-    user.purchasedSkins.push(req.body.ghostSkin);
-    console.log("Added " + req.body.ghostSkin + " to > " + user.purchasedSkins);
+    user.purchasedSkins.push(req.body.skin);
+    console.log("Added " + req.body.skin + " to > " + user.purchasedSkins);
     await user.save();
     res.end();
 });
