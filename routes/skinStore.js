@@ -10,7 +10,8 @@ router.use(cookieParser());
 router.get('/', async (req, res) =>{
     const token = req.cookies.access_token;
     let decoded = jwtDecode(token);
-    res.render('store', {username : decoded.username});
+    let user = await User.findOne({username: decoded.username});
+    res.render('store', {skins : user.purchasedSkins});
 });
 
 // Updating skin
