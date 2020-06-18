@@ -8,7 +8,7 @@ ghostButton.onclick = async () => {
     const url = 'http://b6a6s.io/store';
     const options = {
         method: 'POST',
-        body: JSON.stringify(testSkin),
+        body: JSON.stringify(newSkin),
         headers:{
             'Content-Type': 'application/json'
         },
@@ -23,7 +23,7 @@ ghostChoice.onclick = async () => {
     const url = 'http://b6a6s.io/store';
     const options = {
         method: 'PUT',
-        body: JSON.stringify(ghostSkin),
+        body: JSON.stringify(newSkin),
         headers:{
             'Content-Type': 'application/json'
         },
@@ -36,7 +36,7 @@ defaultChoice.onclick = async () => {
     const url = 'http://b6a6s.io/store';
     const options = {
         method: 'PUT',
-        body: JSON.stringify(ghostSkin),
+        body: JSON.stringify(newSkin),
         headers:{
             'Content-Type': 'application/json'
         },
