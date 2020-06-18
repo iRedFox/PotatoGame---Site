@@ -1,5 +1,7 @@
-const testbutton = document.getElementById('test-buy');
-testbutton.onclick = async () => {
+const ghostButton = document.getElementById('ghost-buy');
+const ghostChoice = document.getElementById('ghost-choice');
+
+ghostButton.onclick = async () => {
     testSkin = { ghostSkin: '/potatoClickTeto.gif' };
     const url = 'http://b6a6s.io/store';
     const options = {
@@ -10,4 +12,7 @@ testbutton.onclick = async () => {
         },
     }
     fetch(url, options)
+    ghostChoice.style.display = 'block';
+    ghostButton.style.display = 'none';
 }
+
