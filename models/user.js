@@ -20,6 +20,10 @@ const userSchema = new mongoose.Schema({
     imgSrc: {
         type: String,
         default: '/potatoClick.gif'
+    },
+    purchasedSkins:{
+        type: Array,
+        default: ['/potatoClick.gif']
     }
 })
 
