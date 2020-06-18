@@ -11,9 +11,8 @@ body(id='gameBackground')
 	div(id='ghostSkin')
 		img(src='/potatoClickTeto.gif')
 		h1 Ghost Skin
-		each skin in skins
-			if skin === '/potatoClickTeto.gif'
-				button(id='ghost-choice' style='display: none;') إختيار
-			else
-				button(id='ghost-buy') شراء بـ 10 بطاطسة
+		if '/potatoClickTeto.gif' in skins
+			button(id='ghost-choice' style='display: none;') إختيار
+		else
+			button(id='ghost-buy') شراء بـ 10 بطاطسة
 	script(src='/store.js')
