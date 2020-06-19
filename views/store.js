@@ -1,7 +1,12 @@
+
+function checkCreation(element){
+    if(!element) return;
+}
+
 const ghostButton = document.getElementById('ghost-buy');
-if(!ghostButton){ return };
+checkCreation(ghostButton);
 const ghostChoice = document.getElementById('ghost-choice');
-if(!ghostChoice){ return };
+checkCreation(ghostChoice);
 const defaultChoice = document.getElementById('default-choice');
 
 
