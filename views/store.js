@@ -13,9 +13,11 @@ if(ghostButton){
                 'Content-Type': 'application/json'
             },
         }
-        fetch(url, options);
+        const res = fetch(url, options)
         ghostButton.style.display = 'none';
-        window.location.href = '/store';
+        if((await res).status === 200){
+            window.location.href = '/store';
+        }
     }
 }
 
@@ -30,8 +32,10 @@ if(ghostChoice){
                 'Content-Type': 'application/json'
             },
         }
-        fetch(url, options)
-        window.location.href = '/game';
+        const res = fetch(url, options)
+        if((await res).status === 200){
+            window.location.href = '/game';
+        }
     }
 }
 
@@ -45,6 +49,8 @@ defaultChoice.onclick = async () => {
             'Content-Type': 'application/json'
         },
     }
-    fetch(url, options);
-    window.location.href = '/game';
+    const res = fetch(url, options);
+    if((await res).status === 200){
+        window.location.href = '/game';
+    }
 }
