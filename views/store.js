@@ -1,7 +1,7 @@
 const ghostButton = document.getElementById('ghost-buy');
-if(!ghostButton) return;
+if(!ghostButton){ return };
 const ghostChoice = document.getElementById('ghost-choice');
-if(!ghostChoice) return;
+if(!ghostChoice){ return };
 const defaultChoice = document.getElementById('default-choice');
 
 
