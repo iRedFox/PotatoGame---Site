@@ -15,7 +15,7 @@ if(ghostButton){
         }
         fetch(url, options);
         ghostButton.style.display = 'none';
-        ghostChoice.style.display = 'block';
+        window.location.href = '/store';
     }
 }
 
@@ -31,6 +31,7 @@ if(ghostChoice){
             },
         }
         fetch(url, options)
+        window.location.href = '/game';
     }
 }
 
@@ -45,4 +46,5 @@ defaultChoice.onclick = async () => {
         },
     }
     fetch(url, options);
+    window.location.href = '/game';
 }
