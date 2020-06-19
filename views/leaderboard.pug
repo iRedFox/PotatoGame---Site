@@ -7,6 +7,5 @@ body(id='gameBackground')
 	img(id='leaderboard' src='leaderboard.png')
 	div(id='leaderboard-text')
 		each user in listOfUsers
-			br
-			div #{user.username} -- #{user.Score}
-			br
+			div
+				p #{user.username} -- #{user.Score}

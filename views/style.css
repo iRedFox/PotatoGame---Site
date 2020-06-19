@@ -233,6 +233,7 @@ img {
     display: block;
     margin: 0 auto;
     text-align: center;
+    z-index: 999999;
 }
 
 @-moz-keyframes rotate {
