@@ -15,6 +15,8 @@ if(ghostButton){
         }
         fetch(url, options)
     }
+    ghostButton.style.display = 'none';
+    ghostChoice.style.display = 'block';
 }
 
 if(ghostChoice){
