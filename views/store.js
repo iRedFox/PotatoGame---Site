@@ -13,10 +13,10 @@ if(ghostButton){
                 'Content-Type': 'application/json'
             },
         }
-        fetch(url, options)
+        fetch(url, options);
+        ghostButton.style.display = 'none';
+        ghostChoice.style.display = 'block';
     }
-    ghostButton.style.display = 'none';
-    ghostChoice.style.display = 'block';
 }
 
 if(ghostChoice){
@@ -44,5 +44,5 @@ defaultChoice.onclick = async () => {
             'Content-Type': 'application/json'
         },
     }
-    fetch(url, options)
+    fetch(url, options);
 }
