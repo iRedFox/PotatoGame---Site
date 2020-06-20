@@ -15,13 +15,13 @@ function init(){
             'Content-Type': 'application/json'
         }
     }
-    
     fetch(url, options)
     .then((response) => {
         return response.text();
     })
     .then((data) => {
         // store the score to currentScore
+        console.log("here's the data" + data);
         currentScore = data;
     });
 }
