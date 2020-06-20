@@ -23,6 +23,7 @@ function init(){
         // store the score to currentScore
         console.log("here's the data > " + data);
         currentScore = data;
+        const points = document.getElementById('coin-count').innerHTML = currentScore + "     الكشتب🩸     ";
     });
 }
 
