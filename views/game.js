@@ -59,7 +59,7 @@ function init(){
         let currentScore = 0;
         currentScore = data;
         console.log('currentScore: ' + currentScore);
-        const points = document.getElementById('coin-count').innerHTML = currentScore + "     الكشتب     ";
+        const points = document.getElementById('coin-count').innerHTML = currentScore + "     الكشتب🩸     ";
     });
     const url1 = 'http://b6a6s.io/getSkin';
     const options1 = {
@@ -128,7 +128,7 @@ async function countClicks(){
             let currentScore = 0;
             currentScore = data;
             console.log('currentScore: ' + currentScore);
-            const points = document.getElementById('coin-count').innerHTML = currentScore + "     الكشتب     ";
+            const points = document.getElementById('coin-count').innerHTML = currentScore + "     الكشتب🩸     ";
         });
         //console.log(canClick);
         canClick = false;

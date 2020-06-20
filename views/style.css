@@ -22,9 +22,10 @@
 }
 
 #coin-count{
-    font-size: 30px;
+    font-size: 40px;
     color: red;
     font-family: 'Rakkas', cursive;
+    padding: 5px 15px;
 }
 
 #potatoHitBox{
@@ -66,22 +67,26 @@
     background-color: bisque;
     display:inline-block;
     margin-right:10px;
+    padding: 6px 15px;
 }
 
 #showranks{
     font-family: 'Rakkas', cursive;
-    font-size: 25px;
+    font-size: 35px;
     color: black;
     background-color: bisque;
     display:inline-block;
+    padding: 5px 15px;
 }
 
 #store-head{
     font-family: 'Rakkas', cursive;
     font-size: 35px;
     color: black;
-    background-color: bisque;
+    display:inline-block;
+    padding: 5px 15px;
 }
+
 
 
 #register{

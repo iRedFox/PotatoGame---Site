@@ -3,12 +3,12 @@ html
 		link(rel="stylesheet" type="text/css" href="./style.css")
 		title لعبة البطاطس2
 body(id='gameBackground' onload='init()')
-	img(id='coins' src='coin-icon.gif')
+	//img(id='coins' src='coin-icon.gif')
 	span(id='coin-count') N/A.. Loading
-	h1(id='rank') | #{rank} مرتبتك في العالم <
-	a(href='/leaderboard' id='showranks') - افضل 5 لاعبين -
-	a(href='/store' id='store-head')  | الستور <
-	button(id='logout-button') #{username} تسجيل الخروج من 
+	h1(id='rank') #{rank} مرتبتك في العالم ⚔️
+	a(href='/leaderboard' id='showranks') افضل 5 لاعبين⚜️
+	a(href='/store' id='store-head')  الستور🛒
+	button(id='logout-button') #{username} تسجيل الخروج من 😰
 	div(id='box')
 		canvas(id='potatoHitBox')
 	img(id='tutorial' src='tutorial.png')
