@@ -76,12 +76,14 @@
     color: black;
     background-color: bisque;
     display:inline-block;
+    margin-right:10px;
     padding: 5px 15px;
 }
 
 #store-head{
     font-family: 'Rakkas', cursive;
     font-size: 35px;
+    background-color: bisque;
     color: black;
     display:inline-block;
     padding: 5px 15px;
