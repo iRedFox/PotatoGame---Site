@@ -1,7 +1,7 @@
 const ghostButton = document.getElementById('ghost-buy');
 const ghostChoice = document.getElementById('ghost-choice');
-const ghostButton = document.getElementById('baked-buy');
-const ghostChoice = document.getElementById('baked-choice');
+const bakedButton = document.getElementById('baked-buy');
+const bakedChoice = document.getElementById('baked-choice');
 const defaultChoice = document.getElementById('default-choice');
 
 if(ghostButton){
