@@ -14,14 +14,6 @@ router.get('/', async (req, res) =>{
     res.render('store', {skins : user.purchasedSkins});
 });
 
-// get score
-router.get('/', async (req, res) =>{
-    const token = req.cookies.access_token;
-    let decoded = jwtDecode(token);
-    let user = await User.findOne({username: decoded.username});
-    res.status(200).send(String(user.Score));
-});
-
 
 // Updating skin
 router.put('/', async (req, res) =>{

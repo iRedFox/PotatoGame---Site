@@ -10,6 +10,7 @@ const clicks = require('./routes/clickPotato');
 const logout = require('./routes/logout');
 const game = require('./routes/gameServer');
 const store = require('./routes/skinStore');
+const getScore = require('./routes/getScore');
 const skin = require('./routes/getSkin');
 const leaderboard = require('./routes/leaderboard');
 const cookieParser = require('cookie-parser');
@@ -30,6 +31,7 @@ app.use('/logout', logout);
 app.use('/game', game);
 app.use('/store', store);
 app.use('/getSkin', skin);
+app.use('/getScore', getScore);
 app.use('/clickRegistry', clicks);
 app.use('/leaderboard', leaderboard);
 

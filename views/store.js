@@ -8,7 +8,7 @@ const defaultChoice = document.getElementById('default-choice');
 let currentScore = 0;
 
 function init(){
-    const url = 'http://b6a6s.io/store';
+    const url = 'http://b6a6s.io/getScore';
     const options = {
         method: 'GET',
         headers:{
