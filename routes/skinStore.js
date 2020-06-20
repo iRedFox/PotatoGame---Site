@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const jwtDecode = require('jwt-decode');
 const cookieParser = require('cookie-parser');
-const auth = require('../middleware/auth');
 router.use(cookieParser());
 
 router.get('/', async (req, res) =>{
@@ -14,6 +13,15 @@ router.get('/', async (req, res) =>{
     console.log(user.purchasedSkins);
     res.render('store', {skins : user.purchasedSkins});
 });
+
+// get score
+router.get('/', async (req, res) =>{
+    const token = req.cookies.access_token;
+    let decoded = jwtDecode(token);
+    let user = await User.findOne({username: decoded.username});
+    res.json(user.Score);
+});
+
 
 // Updating skin
 router.put('/', async (req, res) =>{

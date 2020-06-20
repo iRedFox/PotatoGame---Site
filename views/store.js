@@ -4,6 +4,28 @@ const bakedButton = document.getElementById('baked-buy');
 const bakedChoice = document.getElementById('baked-choice');
 const defaultChoice = document.getElementById('default-choice');
 
+// get his point from the server
+let currentScore = 0;
+
+function init(){
+    const url = 'http://b6a6s.io/store';
+    const options = {
+        method: 'GET',
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    }
+    
+    fetch(url, options)
+    .then((response) => {
+        return response.text();
+    })
+    .then((data) => {
+        // store the score to currentScore
+        currentScore = data;
+    });
+}
+
 if(ghostButton){
     ghostButton.onclick = async () => {
         newSkin = { skin: '/potatoClickTeto.gif' };
@@ -25,18 +47,22 @@ if(ghostButton){
 
 if(ghostChoice){
     ghostChoice.onclick = async () => {
-        newSkin = { skin: '/potatoClickTeto.gif' };
-        const url = 'http://b6a6s.io/store';
-        const options = {
-            method: 'PUT',
-            body: JSON.stringify(newSkin),
-            headers:{
-                'Content-Type': 'application/json'
-            },
-        }
-        const res = fetch(url, options)
-        if((await res).status === 200){
-            window.location.href = '/game';
+        if(currentScore >= 10){
+            newSkin = { skin: '/potatoClickTeto.gif' };
+            const url = 'http://b6a6s.io/store';
+            const options = {
+                method: 'PUT',
+                body: JSON.stringify(newSkin),
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+            }
+            const res = fetch(url, options)
+            if((await res).status === 200){
+                window.location.href = '/game';
+            }
+        }else{
+            alert('you do not have enough score!');
         }
     }
 }
