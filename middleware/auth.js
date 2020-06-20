@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const config = require('config');
 
 module.exports = function (req, res, next){
-    console.log(req.cookies);
+    //console.log(req.cookies);
     const token = req.cookies.access_token;
     if(!token) res.redirect('/');
 

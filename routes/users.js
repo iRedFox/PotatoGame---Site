@@ -8,7 +8,7 @@ const router = express.Router();
 router.post('/', async (req, res) =>{
     const { error } = validate(req.body);
     if (error) return res.status(400).send(error.details[0].message);
-    console.log('validated');
+    //console.log('validated');
     let user = await User.findOne({username: req.body.username});
     if (user) return res.status(400).send('هذا المستخدم مسجل مسبقاً');
     user = new User({
@@ -22,7 +22,7 @@ router.post('/', async (req, res) =>{
 
     const token = user.generateAuthToken();
     console.log('New user: ' + req.body.username);
-    console.log('here is the token: ' + token);
+    //console.log('here is the token: ' + token);
     res.cookie('access_token', token, {
         maxAge: 365 * 24 * 60 * 60 * 100,
         httpOnly: true

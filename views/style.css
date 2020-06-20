@@ -89,6 +89,65 @@
     padding: 5px 15px;
 }
 
+#defaultSkin{
+    font-family: 'Rakkas', cursive;
+    font-size: 15px;
+    text-align: center;
+    background-color: bisque;
+    display: inline-block;
+    margin-right:10px;
+    padding: 6px 15px;
+}
+#GhostSkin{
+    font-family: 'Rakkas', cursive;
+    font-size: 15px;
+    background-color: bisque;
+    text-align: center;
+    display:inline-block;
+    color: black;
+    margin-right:10px;
+    padding: 5px 15px;
+}
+#BakedSkin{
+    font-family: 'Rakkas', cursive;
+    font-size: 15px;
+    background-color: bisque;
+    text-align: center;
+    color: black;
+    display:inline-block;
+    padding: 5px 15px;
+}
+
+#ghost-choice{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
+#default-choice{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
+#baked-choice{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
+#ghost-buy{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
+#default-buy{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
+#baked-buy{
+    font-family: 'Rakkas', cursive;
+    background: whitesmoke;
+    font-size: 25px;
+}
 
 
 #register{
