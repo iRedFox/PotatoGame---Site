@@ -21,7 +21,7 @@ function init(){
     })
     .then((data) => {
         // store the score to currentScore
-        console.log("here's the data" + data);
+        console.log("here's the data > " + data);
         currentScore = data;
     });
 }
@@ -48,7 +48,7 @@ if(ghostButton){
 if(ghostChoice){
     ghostChoice.onclick = async () => {
         if(currentScore >= 10){
-            scoreInfo = { defaultValue : currentScore - 10 };
+            scoreInfo = { defaultValue : -10 };
             const url1 = 'http://b6a6s.io/clickRegistry';
             const options1 = {
                 method: 'POST',
