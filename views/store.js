@@ -28,27 +28,8 @@ function init(){
 
 if(ghostButton){
     ghostButton.onclick = async () => {
-        newSkin = { skin: '/potatoClickTeto.gif' };
-        const url = 'http://b6a6s.io/store';
-        const options = {
-            method: 'POST',
-            body: JSON.stringify(newSkin),
-            headers:{
-                'Content-Type': 'application/json'
-            },
-        }
-        const res = fetch(url, options)
-        ghostButton.style.display = 'none';
-        if((await res).status === 200){
-            window.location.href = '/store';
-        }
-    }
-}
-
-if(ghostChoice){
-    ghostChoice.onclick = async () => {
-        if(currentScore >= 10){
-            scoreInfo = { defaultValue : -10 };
+        if(currentScore >= 10000){
+            scoreInfo = { defaultValue : -10000 };
             const url1 = 'http://b6a6s.io/clickRegistry';
             const options1 = {
                 method: 'POST',
@@ -65,38 +46,74 @@ if(ghostChoice){
             newSkin = { skin: '/potatoClickTeto.gif' };
             const url = 'http://b6a6s.io/store';
             const options = {
-                method: 'PUT',
+                method: 'POST',
                 body: JSON.stringify(newSkin),
                 headers:{
                     'Content-Type': 'application/json'
                 },
             }
             const res = fetch(url, options)
+            ghostButton.style.display = 'none';
             if((await res).status === 200){
-                window.location.href = '/game';
+                window.location.href = '/store';
             }
-        }else{
-            alert('you do not have enough score!');
-            console.log(currentScore);
+        else{
+            alert('Not enough score..');
         }
     }
 }
 
-if(bakedButton){
-    bakedButton.onclick = async () => {
-        newSkin = { skin: '/potatoClickBaked.gif' };
+if(ghostChoice){
+    ghostChoice.onclick = async () => {
+        newSkin = { skin: '/potatoClickTeto.gif' };
         const url = 'http://b6a6s.io/store';
         const options = {
-            method: 'POST',
+            method: 'PUT',
             body: JSON.stringify(newSkin),
             headers:{
                 'Content-Type': 'application/json'
             },
         }
         const res = fetch(url, options)
-        bakedButton.style.display = 'none';
         if((await res).status === 200){
-            window.location.href = '/store';
+            window.location.href = '/game';
+        }
+    }
+}
+
+if(bakedButton){
+    bakedButton.onclick = async () => {
+        if(currentScore >= 30000){
+            scoreInfo = { defaultValue : -30000 };
+            const url1 = 'http://b6a6s.io/clickRegistry';
+            const options1 = {
+                method: 'POST',
+                body: JSON.stringify(scoreInfo),
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+            }
+            fetch(url1, options1)
+            .then((response) => {
+                return response.text();
+            })
+            newSkin = { skin: '/potatoClickBaked.gif' };
+            const url = 'http://b6a6s.io/store';
+            const options = {
+                method: 'POST',
+                body: JSON.stringify(newSkin),
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+            }
+            const res = fetch(url, options)
+            bakedButton.style.display = 'none';
+            if((await res).status === 200){
+                window.location.href = '/store';
+            }
+        }else{
+            alert('not enough score...');
+        }
         }
     }
 }
