@@ -48,6 +48,20 @@ if(ghostButton){
 if(ghostChoice){
     ghostChoice.onclick = async () => {
         if(currentScore >= 10){
+            scoreInfo = { defaultValue : currentScore - 10 };
+            const url1 = 'http://b6a6s.io/clickRegistry';
+            const options1 = {
+                method: 'POST',
+                body: JSON.stringify(scoreInfo),
+                headers:{
+                    'Content-Type': 'application/json'
+                },
+            }
+            fetch(url1, options1)
+            .then((response) => {
+                return response.text();
+            })
+            console.log(currentScore);
             newSkin = { skin: '/potatoClickTeto.gif' };
             const url = 'http://b6a6s.io/store';
             const options = {
@@ -63,6 +77,7 @@ if(ghostChoice){
             }
         }else{
             alert('you do not have enough score!');
+            console.log(currentScore);
         }
     }
 }
