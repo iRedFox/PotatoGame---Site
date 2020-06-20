@@ -17,4 +17,11 @@ body(id='gameBackground')
 			button(id='ghost-choice') إختيار
 		else
 			button(id='ghost-buy') شراء بـ 10 بطاطسة
+	div(id='bakedSkin')
+		img(src='/potatoClickBaked.gif')
+		h1 Baked Skin
+		if skins.includes("/potatoClickBaked.gif")
+			button(id='baked-choice') إختيار
+		else
+			button(id='baked-buy') شراء بـ 10 بطاطسة
 	script(src='/store.js')
