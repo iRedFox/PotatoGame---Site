@@ -248,7 +248,8 @@ img {
 }
 
 #gameBackground{
-    background-color: blanchedalmond;
+    background-image: url("paper.gif");
+    background-repeat: repeat;
 }
 
 
