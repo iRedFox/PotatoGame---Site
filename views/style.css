@@ -76,6 +76,13 @@
     display:inline-block;
 }
 
+#store-head{
+    font-family: 'Rakkas', cursive;
+    font-size: 35px;
+    color: black;
+    background-color: bisque;
+}
+
 
 #register{
     font-family: 'Rakkas', cursive;
