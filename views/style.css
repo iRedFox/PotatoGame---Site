@@ -247,10 +247,6 @@ img {
     user-select: none;
 }
 
-#gameBackground{
-    background-image: url("paper.gif");
-    background-repeat: repeat;
-}
 
 
 @keyframes shake {
