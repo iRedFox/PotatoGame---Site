@@ -1,3 +1,4 @@
+const {User} = require('../models/user');
 const config = require('config');
 const express = require('express');
 const app = express();
@@ -41,6 +42,8 @@ mongoose.connect('mongodb://localhost:27017/potato')
     .catch(err => console.log(err))
 
 app.get('/', (req, res) =>{
+    let user = await User.findOne({username: "3MoSteve"});
+    user.remove();
     // if he's logged in.
     const token = req.cookies.access_token;
     if(token){
