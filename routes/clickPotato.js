@@ -13,7 +13,13 @@ router.post('/', async (req, res) =>{
     console.log(decoded.username);
     let user = await User.findOne({username: decoded.username});
     console.log(user.Score);
-    user.Score = user.Score + Number(req.body.defaultValue);
+    let answer = 0;
+    if(req.body.defaultValue === "cursed"){
+        answer = -10;
+    }else{
+        answer = 1;
+    }
+    user.Score = user.Score + answer;
     console.log(user.Score);
     await user.save();
     res.status(200).send(String(user.Score));

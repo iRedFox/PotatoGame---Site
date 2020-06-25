@@ -120,13 +120,13 @@ async function countClicks(){
         // Move the image randomly.
         if(getBackground.style.backgroundImage){
             console.log('it is cursed');
-            scoreInfo = { defaultValue: -10 };
+            scoreInfo = { defaultValue: "cursed" };
         }else{
             console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
-            scoreInfo = { defaultValue: 1 };
+            scoreInfo = { defaultValue: "notcursed" };
         }
         let chance = Math.random();
-        if(chance < 0.02){
+        if(chance < 0.01){
             console.log(chance);
             curseHim();
         }
