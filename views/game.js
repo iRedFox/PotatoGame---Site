@@ -126,7 +126,7 @@ async function countClicks(){
             scoreInfo = { defaultValue: 1 };
         }
         let chance = Math.random();
-        if(chance < 0.06){
+        if(chance < 0.02){
             console.log(chance);
             curseHim();
         }
