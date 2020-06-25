@@ -121,7 +121,7 @@ function curseHim(){
     }, 5000);
 }
 
-curseHim();
+
 if(getBackground.style.backgroundImage){
     console.log('it is cursed');
     scoreInfo = { defaultValue: -10 };
@@ -133,6 +133,13 @@ if(getBackground.style.backgroundImage){
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
+        let chance = Math.random();
+        if(chance < 0.20){
+            curseHim();
+        }
+        else{
+            return
+        }
         clickSound.play();
         let x = Math.floor(Math.random()*650) | 0;
         let y = Math.floor(Math.random()*920) | 0;
