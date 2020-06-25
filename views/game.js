@@ -1,3 +1,5 @@
+const e = require("express");
+
 console.log('The client javascript code is running..');
 
 let tutorial = document.getElementById('tutorial');
@@ -101,7 +103,14 @@ c2d.addEventListener("mouseout", mouseMoveOut, false);
 
 let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
-scoreInfo = { defaultValue: 1 };
+
+const backgroundColor = document.getElementById('gameBackground');
+if(backgroundColor.style.backgroundColor === "red"){
+    scoreInfo = { defaultValue: -10 };
+}else{
+    scoreInfo = { defaultValue: 1 };
+}
+
 
     
 async function countClicks(){

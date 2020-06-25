@@ -306,7 +306,7 @@ img {
 }
 
 #gameBackground{
-    background-color: bisque;
+    background-color: red;
 }
 
 @-moz-keyframes rotate {
