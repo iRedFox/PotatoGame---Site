@@ -111,13 +111,6 @@ function curseHim(){
     getBackground.style.backgroundImage = "url('/cursed.png')";
     setTimeout(() => { 
         getBackground.style.backgroundImage = "";
-        if(getBackground.style.backgroundImage){
-            console.log('it is cursed');
-            scoreInfo = { defaultValue: -10 };
-        }else{
-            console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
-            scoreInfo = { defaultValue: 1 };
-        }
     }, 5000);
 }
 
@@ -133,7 +126,7 @@ async function countClicks(){
             scoreInfo = { defaultValue: 1 };
         }
         let chance = Math.random();
-        if(chance < 0.4){
+        if(chance < 0.04){
             console.log(chance);
             curseHim();
         }
