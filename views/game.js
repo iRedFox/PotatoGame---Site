@@ -1,5 +1,3 @@
-const e = require("express");
-
 console.log('The client javascript code is running..');
 
 let tutorial = document.getElementById('tutorial');

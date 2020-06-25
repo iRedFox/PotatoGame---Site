@@ -307,6 +307,7 @@ img {
 
 #gameBackground{
     background-color: red;
+    background-repeat: repeat;
 }
 
 @-moz-keyframes rotate {
