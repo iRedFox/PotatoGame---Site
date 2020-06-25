@@ -103,6 +103,8 @@ let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 
 const getBackground = document.getElementById('gameBackground');
+getBackground.style.backgroundColor = 'yellow';
+
 
 if(getBackground.style.backgroundColor === "red"){
     console.log('it is red');
