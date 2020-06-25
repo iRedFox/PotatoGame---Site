@@ -134,7 +134,7 @@ async function countClicks(){
     if(canClick){
         // Move the image randomly.
         let chance = Math.random();
-        if(chance < 0.20){
+        if(chance < 0.10){
             console.log(chance);
             curseHim();
         }
