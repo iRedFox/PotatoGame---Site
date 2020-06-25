@@ -29,7 +29,8 @@ function init(){
 
 if(ghostButton){
     ghostButton.onclick = async () => {
-        if(currentScore >= 10000){
+        if(currentScore >= 10000)
+        {
             scoreInfo = { defaultValue : -10000 };
             const url1 = 'http://b6a6s.io/clickRegistry';
             const options1 = {
@@ -58,7 +59,7 @@ if(ghostButton){
             if((await res).status === 200){
                 window.location.href = '/store';
             }
-        else{
+        }else{
             alert('Not enough score..');
         }
     }
@@ -114,7 +115,6 @@ if(bakedButton){
             }
         }else{
             alert('not enough score...');
-        }
         }
     }
 }
