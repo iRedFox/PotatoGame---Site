@@ -102,12 +102,11 @@ c2d.addEventListener("mouseout", mouseMoveOut, false);
 let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 
-const backgroundColor = document.getElementById('gameBackground');
-if(backgroundColor.style.backgroundColor === "red"){
+if(body.style.backgroundColor === "red"){
     console.log('it is red');
     scoreInfo = { defaultValue: -10 };
 }else{
-    console.log('it is not red it is' + backgroundColor.style.backgroundColor);
+    console.log('it is not red it is' + body.style.backgroundColor);
     scoreInfo = { defaultValue: 1 };
 }
 
