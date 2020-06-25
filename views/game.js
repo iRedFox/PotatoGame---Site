@@ -111,7 +111,14 @@ function curseHim(){
     getBackground.style.backgroundImage = "url('/cursed.png')";
     setTimeout(() => { 
         getBackground.style.backgroundImage = "";
-    }, 350);
+        if(getBackground.style.backgroundImage){
+            console.log('it is cursed');
+            scoreInfo = { defaultValue: -10 };
+        }else{
+            console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
+            scoreInfo = { defaultValue: 1 };
+        }
+    }, 5000);
 }
 
 curseHim();
