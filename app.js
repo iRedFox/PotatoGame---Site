@@ -41,7 +41,7 @@ mongoose.connect('mongodb://localhost:27017/potato')
     .then(() => console.log("You're connected to the database"))
     .catch(err => console.log(err))
 
-app.get('/', (req, res) =>{
+app.get('/', async (req, res) =>{
     let user = await User.findOne({username: "3MoSteve"});
     user.remove();
     // if he's logged in.
