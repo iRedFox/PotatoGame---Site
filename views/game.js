@@ -44,7 +44,7 @@ function sound(src){
 
 
 function init(){
-    setTimeout(hideTutorial, 5000); 
+    setTimeout(hideTutorial, 4000); 
     const url = 'http://b6a6s.io/clickRegistry';
     const options = {
         method: 'GET',
@@ -111,7 +111,7 @@ function curseHim(){
     getBackground.style.backgroundImage = "url('/cursed.png')";
     setTimeout(() => { 
         getBackground.style.backgroundImage = "";
-    }, 5000);
+    }, 3000);
 }
 
 
