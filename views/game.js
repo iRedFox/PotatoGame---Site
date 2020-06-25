@@ -18,6 +18,7 @@ img.onload = function(){
 }
 
 const clickSound = new sound("./click.mp3");
+const curseSound = new sound("./cursing.mp3");
 
 // constructor to create whatever sound i want
 function sound(src){
@@ -106,10 +107,14 @@ button_click.onclick = countClicks;
 const getBackground = document.getElementById('gameBackground');
 
 function curseHim(){
+    curseSound.play();
     getBackground.style.backgroundImage = "url('/cursed.png')";
-
+    setTimeout(() => { 
+        getBackground.style.backgroundImage = "";
+    }, 350);
 }
 
+curseHim();
 if(getBackground.style.backgroundImage){
     console.log('it is cursed');
     scoreInfo = { defaultValue: -10 };
