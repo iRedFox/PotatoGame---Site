@@ -107,7 +107,7 @@ if(backgroundColor.style.backgroundColor === "red"){
     console.log('it is red');
     scoreInfo = { defaultValue: -10 };
 }else{
-    console.log('it is not red');
+    console.log('it is not red it is' + backgroundColor.style.backgroundColor);
     scoreInfo = { defaultValue: 1 };
 }
 
