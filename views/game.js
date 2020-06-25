@@ -122,17 +122,16 @@ function curseHim(){
 }
 
 
-if(getBackground.style.backgroundImage){
-    console.log('it is cursed');
-    scoreInfo = { defaultValue: -10 };
-}else{
-    console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
-    scoreInfo = { defaultValue: 1 };
-}
-
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
+        if(getBackground.style.backgroundImage){
+            console.log('it is cursed');
+            scoreInfo = { defaultValue: -10 };
+        }else{
+            console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
+            scoreInfo = { defaultValue: 1 };
+        }
         let chance = Math.random();
         if(chance < 0.10){
             console.log(chance);
