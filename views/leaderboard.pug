@@ -8,5 +8,5 @@ body(id='gameBackground')
 	div(id='leaderboard-text')
 		each user in listOfUsers
 			div
-				img(id='skin' src=#{user.imgSrc})
+				img(id='skin' src="#{user.imgSrc}")
 				p #{user.username} -- #{user.Score}
