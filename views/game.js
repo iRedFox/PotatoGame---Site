@@ -108,7 +108,7 @@ getBackground.style.backgroundImage = "url('/cursed.png')";
 
 console.log(getBackground.style.backgroundImage);
 
-if(getBackground.style.backgroundImage == "url('/cursed.png')"){
+if(getBackground.style.backgroundImage){
     console.log('it is cursed');
     scoreInfo = { defaultValue: -10 };
 }else{
