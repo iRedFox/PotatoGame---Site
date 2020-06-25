@@ -135,10 +135,12 @@ async function countClicks(){
         // Move the image randomly.
         let chance = Math.random();
         if(chance < 0.20){
+            console.log(chance);
             curseHim();
         }
         else{
-            return
+            console.log(chance);
+            return;
         }
         clickSound.play();
         let x = Math.floor(Math.random()*650) | 0;
