@@ -126,10 +126,11 @@ async function countClicks(){
             scoreInfo = { defaultValue: 1 };
         }
         let chance = Math.random();
-        if(chance < 0.04){
+        if(chance < 0.06){
             console.log(chance);
             curseHim();
         }
+        console.log(chance);
         clickSound.play();
         let x = Math.floor(Math.random()*650) | 0;
         let y = Math.floor(Math.random()*920) | 0;
