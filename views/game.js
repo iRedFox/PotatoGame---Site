@@ -104,9 +104,11 @@ button_click.onclick = countClicks;
 
     
 const getBackground = document.getElementById('gameBackground');
-getBackground.style.backgroundImage = "url('/cursed.png')";
 
-console.log(getBackground.style.backgroundImage);
+function curseHim(){
+    getBackground.style.backgroundImage = "url('/cursed.png')";
+
+}
 
 if(getBackground.style.backgroundImage){
     console.log('it is cursed');
