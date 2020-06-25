@@ -104,9 +104,9 @@ button_click.onclick = countClicks;
 
     
 const getBackground = document.getElementById('gameBackground');
-getBackground.style.backgroundImage = "/cursed.png";
+getBackground.style.backgroundImage = url('/cursed.png');
 
-if(getBackground.style.backgroundImage === "/cursed.png"){
+if(getBackground.style.backgroundImage === url('/cursed.png')){
     console.log('it is cursed');
     scoreInfo = { defaultValue: -10 };
 }else{
