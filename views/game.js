@@ -104,8 +104,10 @@ button_click.onclick = countClicks;
 
 const backgroundColor = document.getElementById('gameBackground');
 if(backgroundColor.style.backgroundColor === "red"){
+    console.log('it is red');
     scoreInfo = { defaultValue: -10 };
 }else{
+    console.log('it is not red');
     scoreInfo = { defaultValue: 1 };
 }
 
