@@ -74,17 +74,6 @@ function init(){
         imgSkin = data;
         img.src = imgSkin;
     });
-
-    const getBackground = document.getElementById('gameBackground');
-
-
-    if(getBackground.style.backgroundColor === "red"){
-        console.log('it is red');
-        scoreInfo = { defaultValue: -10 };
-    }else{
-        console.log('it is not red it is ' + getBackground.style.backgroundColor);
-        scoreInfo = { defaultValue: 1 };
-    }
 }
 
 function mouseMove(event) {
@@ -114,6 +103,17 @@ let button_click = document.getElementById('potatoHitBox');
 button_click.onclick = countClicks;
 
     
+const getBackground = document.getElementById('gameBackground');
+getBackground.style.backgroundImage = "/cursed.png";
+
+if(getBackground.style.backgroundImage === "/cursed.png"){
+    console.log('it is cursed');
+    scoreInfo = { defaultValue: -10 };
+}else{
+    console.log('it is not cursed it is ' + getBackground.style.backgroundColor);
+    scoreInfo = { defaultValue: 1 };
+}
+
 async function countClicks(){
     if(canClick){
         // Move the image randomly.
