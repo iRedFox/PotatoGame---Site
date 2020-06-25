@@ -9,7 +9,8 @@ body(id='gameBackground' onload='init()')
 		h1(id='rank') #{rank} مرتبتك في العالم ⚔️
 		a(href='/leaderboard' id='showranks') افضل 5 لاعبين⚜️
 		a(href='/store' id='store-head')  الستور🛒
-	button(id='logout-button') #{username} تسجيل الخروج من 😰
+	div
+		button(id='logout-button') #{username} تسجيل الخروج من 😰
 	div(id='box')
 		canvas(id='potatoHitBox')
 	img(id='tutorial' src='tutorial.png')

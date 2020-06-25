@@ -295,7 +295,6 @@ img {
     top: 20%;
 }
 
-
 #leaderboard-butt{
     font-family: 'Rakkas', cursive;
     font-size: 30px;
@@ -304,6 +303,10 @@ img {
     margin: 0 auto;
     text-align: center;
     z-index: 999999;
+}
+
+#gameBackground{
+    background-color: bisque;
 }
 
 @-moz-keyframes rotate {
