@@ -138,10 +138,6 @@ async function countClicks(){
             console.log(chance);
             curseHim();
         }
-        else{
-            console.log(chance);
-            return;
-        }
         clickSound.play();
         let x = Math.floor(Math.random()*650) | 0;
         let y = Math.floor(Math.random()*920) | 0;
